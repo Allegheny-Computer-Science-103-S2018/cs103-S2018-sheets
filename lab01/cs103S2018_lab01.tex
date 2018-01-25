@@ -316,11 +316,14 @@ directory'' of your GitHub repository and type \command{pandoc src/www/answers.m
 run your web server by typing the command \command{serve src/www 4250}. At this point, you can start your web browser
 and go to the web site \url{http://localhost:4250/answers.html}.
 
-Once the web site's content is correct, please reflect on this process. What step did you find to be the most
-challenging? Why? You should write your reflections in a file, called \reflection{}, that uses the Markdown writing
-language. You can learn more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the
-assignment, you should write one high-quality paragraph that reports on your experiences. Now, verbally share your
-experiences with another class member!
+Does your new web site look correct? If not, then continue to edit and convert it until the files are correct. Once the
+web site's content is correct, please reflect on this process. As you iteratively complete this assignment, you should
+regularly commit to your GitHub repository, following the steps in the next section. Also, note that your web server
+will require a dedicated terminal when it is running. Now, reflect on the entire process. What step did you find to be
+the most challenging? Why? You should write your reflections in a file, called \reflection{}, that also uses the
+Markdown writing language. To complete this aspect of the assignment, you should write one high-quality paragraph that
+reports on your experiences. Now, verbally share your experiences with another class member and the course instructor
+and at least one a teaching assistant!
 
 Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
 software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
@@ -336,8 +339,7 @@ Markdown standards established by the \step{Markdown linting} tool available at
 \url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
 to automatically check if your submission meets the standards for correctness. For instance, GatorGrader will check to
-ensure that \mainprogram{} produces exactly four lines of output and that you use the \command{new Date()} construct in
-the Java source code to cause the program to display today's date.
+ensure that \mainprogram{} has the required four subsections created with the \command{##} code.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
 completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
@@ -347,8 +349,9 @@ it. Once your program is building correctly, fulfilling at least some of the ass
 transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
 the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
 \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the course instructor for assistance, if necessary.
+is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please read
+the messages in your terminal and try to determine why, asking a teaching assistant or the course instructor for
+assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
 \gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
@@ -377,7 +380,7 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
   for it.
 
 \item A properly formatted and correct version of \mainprogramsource{} that both meets all of the established
-  requirements and produces the desired output.
+  requirements and produces the desired web site.
 
 \end{enumerate}
 
@@ -398,7 +401,7 @@ questions about the evaluation of this laboratory assignment.
 In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
 carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
+assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., HTML source code or
 Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
 the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
 
