@@ -224,7 +224,10 @@ many different text editors on your workstation and you should feel free to expl
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
 often use the text editor called \command{gvim}. Today, you will view and improve your first web site in {\tt gvim}! To
 load the source code of today's web site into \program{gvim}, you should type \command{gvim src/www/answers.md} in your
-terminal window. This should cause a new window, the \program{gvim} text editor, to appear on your computer's screen.
+terminal window. This should cause a new window, the \program{gvim} text editor, to appear on your computer's screen. If
+your \program{gvim} screen is blank, then this means that you did not run it from the directory that contains the
+starting source code. Make sure that you use the \program{cd} command to go into this assignment's repository! Please
+talk with the course instructor if you cannot access the provided source code.
 
 This practical assignment invites you to implement a web site that displays a paragraph and an image. First, you should
 edit the header at the top of the file to include your name. Next, you should go below the header and, keeping a space
@@ -293,11 +296,6 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 \begin{enumerate}
 
 \setlength{\itemsep}{0in}
-
-\item Stored in \reflection{}, a one-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it.
 
 \item A properly formatted and correct version of \mainprogramsource{} that both meets all of the established
   requirements and produces the correct HTML and the desired static web site.
