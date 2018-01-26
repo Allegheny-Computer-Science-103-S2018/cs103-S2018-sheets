@@ -136,7 +136,7 @@ using the grading tool to assess your progress towards correctly completing the 
   the course instructor.
 
 \item {\bf Store your files in GitHub}. Continuing with this laboratory assignment, you will be responsible for storing
-  all of your files (e.g., Java source code and Markdown-based writing) in a Git repository using GitHub Classroom.
+  all of your files (e.g., JavaScript code and Markdown-based writing) in a Git repository using GitHub Classroom.
   Please verify that you have saved your source code in your Git repository by using \command{git status} to ensure that
   everything is updated. You can see if your assignment submission meets the established correctness requirements by
   using the provided checking tools on your local computer and in checking the commits in GitHub.
@@ -176,16 +176,16 @@ each of them will help you to understand how to use both GitHub and GitHub Class
 should also read Chapter 1 in the course textbook, again paying close attention to Section 1.5 and Figures 1.6 and 1.7.
 Please see the instructor or one of the teaching assistants if you have questions these reading assignments.
 
-\section*{Using Your Computer Science Account}
+% \section*{Using Your Computer Science Account}
 
-In advance of today's lab you have already received the details about your Alden Hall computer account and learned how
-to log on and use programs. You should ensure that you have recorded how to complete these steps in your notebook;
-please report any problems as soon as they occur. You may use this account on any computer in Alden labs 101, 103, or
-109. Your files are stored on a central server; you don't have to use the same machine every time you log on in a
-laboratory.
+% In advance of today's lab you have already received the details about your Alden Hall computer account and learned how
+% to log on and use programs. You should ensure that you have recorded how to complete these steps in your notebook;
+% please report any problems as soon as they occur. You may use this account on any computer in Alden labs 101, 103, or
+% 109. Your files are stored on a central server; you don't have to use the same machine every time you log on in a
+% laboratory.
 
-Hours of lab availability are posted on the bulletin board in each lab and on the following Web site:
-\url{http://www.cs.allegheny.edu/}; the on-duty lab monitor is always available in Alden Hall.
+% Hours of lab availability are posted on the bulletin board in each lab and on the following Web site:
+% \url{http://www.cs.allegheny.edu/}; the on-duty lab monitor is always available in Alden Hall.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
@@ -214,60 +214,40 @@ in the terminal, it would look like:
   git clone https://github.com/Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-practical-1-gkapfham.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. Please continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
-and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
-a neighbor and a \mbox{teaching assistant}.
+After this command finishes, you can use \command{cd} to change into the new directory. What files and directories do
+you see? What do you think is their purpose? Please ask questions if you have any!
 
-\section*{Creating a Web Site Using Markdown}
+\section*{Using Markdown to Create a Web Site With an Image}
 
 In order view the source code of a web site or a Markdown-based writing assignment, you need a text editor. There are
 many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
 often use the text editor called \command{gvim}. Today, you will view and improve your first web site in {\tt gvim}! To
 load the source code of today's web site into \program{gvim}, you should type \command{gvim src/www/answers.md} in your
-terminal window. This should cause a new window, the \program{gvim} text editor, to appear on your screen. Since
-\program{gvim} is a modal editor, you may notice that if you start typing, nothing appears (unless you happen to hit
-certain letters such as \command{i}, \command{o}, \command{a}, and a few others). This is because you are not in
-``insert mode.'' To get into insert mode, just type the letter \command{i} (lower case). Once you do this, the window
-should show the word \command{--INSERT--} in the lower left corner. Students who are having difficulties learning how to
-use \command{gvim} should keep trying---but you can also use the Atom text editor in this class.
+terminal window. This should cause a new window, the \program{gvim} text editor, to appear on your computer's screen.
 
-This laboratory assignment invites you to implement a web site that displays paragraphs and lists of text. First, you
-should edit the header at the top of the file to include your name. Next, you should go below the header and, keeping a
-space between it and your paragraph, write a paragraph that introduces yourself as a student in this course.
-Importantly, this paragraph should include a link to the front page of the course web site. Make sure that you refer to
-the GitHub Guide for Markdown to learn how to create headers and links in this file! After you have finished this task,
-please continue to edit the next three subsections of the web site, explaining your major and minor and why you want to
-study web development. Finally, the last section of this web site requires you to read Section 1.5's description of the
-web development roles and skills and then to make an unordered list. Please structure this list in the following
-fashion: each of the three items should give the title of the role and then have a sub-item (i.e., an item nested below
-this item that is indented with four spaces), furnishing a sentence explaining why you are interested in this role.
+This laboratory assignment invites you to implement a web site that displays a paragraph and an image. First, you should
+edit the header at the top of the file to include your name. Next, you should go below the header and, keeping a space
+between it and your paragraph, write a paragraph that again includes a link to the course web site and explains that
+this practical assignment is designed to help you learn about images and to reflect on the laboratory assignment that
+you started. Make sure that you refer to the GitHub Guide for Markdown to learn how to create headers and links in this
+file! After you have finished this task, please continue to edit the next two subsections of the web site, explaining
+your emotions when working on the first laboratory assignment and then linking to an image that best expresses those
+emotions. Please notice that the provided code does not correctly link to an image. So, to find your image, please
+search through the Flickr Creative Commons, available at \url{https://www.flickr.com/creativecommons/}, looking for an
+image that is suitable for a classroom setting. Now, find the link for am image in Flickr by clicking the download
+button, selecting ``View all sizes'' and then selecting the image and its link that will best fit your web site. Please
+see the instructor or a teaching assistant if you are stuck on this step!
 
-Whenever you are finished typing text in \program{gvim}, press the ESC key located in the upper left corner of the
-keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window. Now, you are ready to learn to use new tools that convert your Markdown file into HTML and run a
-web server to make your web site available in a browser. To convert your Markdown, make sure that you are in the ``home
-directory'' of your GitHub repository and type \command{pandoc src/www/answers.md -o src/www/answers.html}. Now, you can
-run your web server by typing the command \command{serve src/www 4250}. At this point, you can start your web browser
-and go to the web site \url{http://localhost:4250/answers.html}.
-
-Does your new web site look correct? If not, then continue to edit and convert it until the files are correct. Once the
-web site's content is correct, please reflect on this process. As you iteratively complete this assignment, you should
-regularly commit to your GitHub repository, following the steps in the next section. Also, note that your web server
-will require a dedicated terminal when it is running. Now, reflect on the entire process. What step did you find to be
-the most challenging? Why? You should write your reflections in a file, called \reflection{}, that also uses the
-Markdown writing language. To complete this aspect of the assignment, you should write one high-quality paragraph that
-reports on your experiences. Now, verbally share your experiences with another class member and the course instructor
-and at least one the teaching assistants!
-
-Since this is our first laboratory assignment and you are still learning how to use the appropriate hardware and
-software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+Now, you are ready to learn to use new tools that convert your Markdown file into HTML and run a web server to make your
+web site available in a browser. To convert your Markdown, make sure that you are in the ``home directory'' of your
+GitHub repository and type \command{pandoc src/www/answers.md -o src/www/answers.html}. Now, you can run your web server
+by typing the command \command{serve src/www 4250}. At this point, you can start your web browser and go to the web site
+\url{http://localhost:4250/answers.html}. Does your new web site look correct? If not, then continue to edit and convert
+it until the files are correct. Since this is our first laboratory assignment and you are still learning how to use the
+appropriate hardware and software, don't become frustrated if you make a mistake. Instead, use your mistakes as an
+opportunity for learning both about the necessary technology and the background and expertise of the other students in
+the class, the teaching assistants, and the course instructor.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
@@ -323,25 +303,25 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 \end{enumerate}
 
-\section*{Evaluation of Your Laboratory Assignment}
+\section*{Evaluation of Your Practical Assignment}
 
 Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
 on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
 whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
 met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
+studying the efficiency and effectiveness of your Markdown source code, the instructor will also evaluate the accuracy of
+both your writing and the constructs in your source code. If your submission receives a red \naughtmark{}, the
 instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
 your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
+questions about the evaluation of this practical assignment.
 
-\section*{Adhering to the Honor Code}
+% \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., HTML source code or
-Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+% carefully between the student who discusses the principles underlying a problem with others and the student who produces
+% assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., HTML source code or
+% Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
+% the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
 
 \end{document}
