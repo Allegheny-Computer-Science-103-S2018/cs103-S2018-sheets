@@ -251,22 +251,61 @@ assignment, you should edit the header at the top of the file to include your
 name. Next, you should go below the header and, keeping a space between it and
 your paragraph, write a paragraph that links to the Pandoc manual available at
 \url{https://pandoc.org/MANUAL.html}, explaining one thing that you learned
-about Pandoc. Your introductory paragraph should also acknowledge, this time with a
-link to \url{https://github.com/otsaloma/markdown-css}, that you are using
-cascading style sheets to influence the display of the generated HTML.
+about Pandoc. Your introductory paragraph should also acknowledge, this time
+with a link to \url{https://github.com/otsaloma/markdown-css}, that you are
+using externally provided cascading style sheets to influence the display of the
+generated HTML.
 
-Make sure that you refer to the GitHub Guide for Markdown to learn how to create
-headers and links in this file! After you have finished these task, please
-continue to edit the following subsections of the web site, explaining your
-major and minor and why you want to study web development.
+You will notices that the \mainprogram{} also asks you to refer to source code
+in both an ``inline'' and ``fenced'' fashion. This first type of formatting will
+allow you to refer to the name of a file and see it appear in a distinct font.
+For instance, a filename that is surrounded by backticks would be display as an
+inline code segment. Alternatively, a fenced code segment starts with three
+backticks, includes source code or program output, and then concludes with three
+more backticks. You will use fenced code segments to display terminal commands
+in your web site. Your \mainprogram{} should also include a table that reports
+on your understanding of the content in Table 2.1 of your textbook.
+Specifically, you should pick at least three error codes and explain them using
+a Markdown table with the same format as Table 2.1. Again, please refer to the
+``Markdown Syntax'' guide for useful examples and talk with the instructor if
+you have questions about using these constructs.
 
-Whenever you are finished typing text in \program{gvim}, press the ESC key located in the upper left corner of the
-keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window. Now, you are ready to learn to use new tools that convert your Markdown file into HTML and run a
-web server to make your web site available in a browser. To convert your Markdown, make sure that you are in the ``home
-directory'' of your GitHub repository and type \command{pandoc src/www/html/answers.md -o src/www/html/answers.html}. Now, you can
+Whenever you are finished typing text in \program{gvim}, press the ESC key
+located in the upper left corner of the keyboard. This should remove the word
+\command{--INSERT--} from the bottom of the screen and take you out of insert
+mode. Use the \option{File/Save} menu to save your program. Alternatively, if
+you would like to use the keyboard to save your file, you can press \command{:w}
+when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
+your terminal window. Now, you are ready to use the tools that convert your
+Markdown file into HTML and run a web server to make your web site available in
+a browser. To convert your Markdown, make sure that you are in the ``home
+directory'' of your GitHub repository and type one the following commands. Note
+that these commands are different than what you used in a previous laboratory
+assignment because they specify that output must adhere to the HTML5 standard
+and apply a cascading style sheet in a single (i.e., ``self-contained'') file.
+Please notice that the specifying a different \command{--css} argument will
+cause the style of the generated HTML to vary. In summary, what does the web
+site look like?
+
+\begin{verbatim}
+pandoc src/www/html/answers.md \
+       --output=src/www/html/answers.html \
+       --to=html5 \
+       --css=src/www/css/github.css \
+       --self-contained \
+       --smart
+\end{verbatim}
+
+\begin{verbatim}
+pandoc src/www/html/answers.md \
+       --output=src/www/html/answers.html \
+       --to=html5 \
+       --css=src/www/css/tufte.css \
+       --self-contained \
+       --smart
+\end{verbatim}
+
+Now, you can
 run your web server by typing the command \command{serve src/www 4250}. At this point, you can start your web browser
 and go to the web site \url{http://localhost:4250/answers.html}.
 
