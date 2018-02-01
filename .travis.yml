@@ -5,6 +5,7 @@ before_install:
 script:
 - mkdir _build
 - latexmk -pdf -outdir=_build lab01/cs103S2018_lab01.tex
+- latexmk -pdf -outdir=_build lab02/cs103S2018_lab02.tex
 - latexmk -pdf -outdir=_build practical01/cs103S2018_practical01.tex
 deploy:
   provider: releases
@@ -12,6 +13,7 @@ deploy:
     secure: bEUjP3sVFNL6vEkn9wyLCGrL9KuKDsARIIvb/fftOLy+fqtowad0X0IhnGelSG680hG2eS4/Bnpoi51hH5utrQBlxqMIlbr0buTHuH+DAmPGyoVWoVVBHWH0fH5EILjNrijjwGfOIPv5MHgB4TNoCVHRwJODKwKFVNVro+/aUzrTQRXIJOHyckySeVxGpx+zNCZ6mh38kFwNtEQ3npM28TJ1v2mqI+Q3SjGy/AsRbSU2JDfSvWQ/KYBxx950owwjZwz88q93CwQGBS/PRrUYhdwxnHfvAwFH0M29vKyq4O+PrUEcxZvijguSfVVZlsl+5jpfHzEkFdEapBwlgNwF11K0bMlHDfCBvk4PyOTmPLM1G3S9Ire6f/99bSQ1565ltvc57+M2n9Orc7bcBPa5tLzNxd6GbNxdYNFQzjOSU1mze4v+TKq8ZizHF/9mWfFYdZSDt7fzFa8D42UYLnMnvZ3RvZOh5iBpMrRoPzpe4KSJvt6ajtxlXfB4oglDwr6OIJW8Hu6zY/vMzUDAY9A9B3TaYfJOI3u4JvWp6JuMvM+QyVrCgsTcqzuWKU6jeQFEk7LlhJXLIx760aGybQHjc6qHWiT0yK7p8NOhLK4Ah/wAqTB7TCsKFu+niR+MKzxnRUr0KHrQxIxglijd62GkKWHsPxyYUMsCduuh2gLXC1Q=
   file:
     - _build/cs103S2018_lab01.pdf
+    - _build/cs103S2018_lab02.pdf
     - _build/cs103S2018_practical01.pdf
   skip_cleanup: true
   on:
