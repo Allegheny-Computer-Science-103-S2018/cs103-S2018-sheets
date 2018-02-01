@@ -4,9 +4,9 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{February 1}
-\newcommand{\assignmentassignedate}{January 25}
-\newcommand{\assignmentnumber}{One}
+\newcommand{\assignmentduedate}{February 8}
+\newcommand{\assignmentassignedate}{February 1}
+\newcommand{\assignmentnumber}{Two}
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Thursday}
@@ -18,7 +18,7 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{answers.md}}
-\newcommand{\mainprogramsource}{\lstinline{src/www/answers.md}}
+\newcommand{\mainprogramsource}{\lstinline{src/www/html/answers.md}}
 
 % Edit this commands to describe key deliverables
 
@@ -29,10 +29,6 @@
 % --> Running gatorgrader.sh
 \newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
 \newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
-
-% --> Compiling and running program with gradle
-\newcommand{\gradlebuild}{\command{gradle build}}
-\newcommand{\gradlerun}{\command{gradle run}}
 
 % Commands to describe key git tasks
 
@@ -46,7 +42,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/www/answers.md -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/www/html/answers.md -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -287,7 +283,7 @@ In order view the source code of a web site or a Markdown-based writing assignme
 many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
 powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
 often use the text editor called \command{gvim}. Today, you will view and improve your first web site in {\tt gvim}! To
-load the source code of today's web site into \program{gvim}, you should type \command{gvim src/www/answers.md} in your
+load the source code of today's web site into \program{gvim}, you should type \command{gvim src/www/html/answers.md} in your
 terminal window. This should cause a new window, the \program{gvim} text editor, to appear on your screen. Since
 \program{gvim} is a modal editor, you may notice that if you start typing, nothing appears (unless you happen to hit
 certain letters such as \command{i}, \command{o}, \command{a}, and a few others). This is because you are not in
@@ -312,7 +308,7 @@ mode. Use the \option{File/Save} menu to save your program. Alternatively, if yo
 your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
 your terminal window. Now, you are ready to learn to use new tools that convert your Markdown file into HTML and run a
 web server to make your web site available in a browser. To convert your Markdown, make sure that you are in the ``home
-directory'' of your GitHub repository and type \command{pandoc src/www/answers.md -o src/www/answers.html}. Now, you can
+directory'' of your GitHub repository and type \command{pandoc src/www/html/answers.md -o src/www/html/answers.html}. Now, you can
 run your web server by typing the command \command{serve src/www 4250}. At this point, you can start your web browser
 and go to the web site \url{http://localhost:4250/answers.html}.
 
