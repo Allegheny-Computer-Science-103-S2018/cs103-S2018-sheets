@@ -287,6 +287,8 @@ Please notice that the specifying a different \command{--css} argument will
 cause the style of the generated HTML to vary. In summary, what does the web
 site look like?
 
+\vspace*{-.05in}
+
 \begin{verbatim}
 pandoc src/www/html/answers.md \
        --output=src/www/html/answers.html \
@@ -295,6 +297,8 @@ pandoc src/www/html/answers.md \
        --self-contained \
        --smart
 \end{verbatim}
+
+\vspace*{-.2in}
 
 \begin{verbatim}
 pandoc src/www/html/answers.md \
@@ -305,52 +309,72 @@ pandoc src/www/html/answers.md \
        --smart
 \end{verbatim}
 
-Now, you can
-run your web server by typing the command \command{serve src/www 4250}. At this point, you can start your web browser
-and go to the web site \url{http://localhost:4250/answers.html}.
+\vspace*{-.05in}
 
-Does your new web site look correct? If not, then continue to edit and convert it until the files are correct. Once the
-web site's content is correct, please reflect on this process. As you iteratively complete this assignment, you should
-regularly commit to your GitHub repository, following the steps in the next section. Also, note that your web server
-will require a dedicated terminal when it is running. Now, reflect on the entire process. What step did you find to be
-the most challenging? Why? You should write your reflections in a file, called \reflection{}, that also uses the
-Markdown writing language. To complete this aspect of the assignment, you should write one high-quality paragraph that
-reports on your experiences. Now, verbally share your experiences with another class member and the course instructor
-and at least one the teaching assistants!
+Now, you can run your web server by typing the command \command{serve
+src/www/html 4250}. At this point, you can start your web browser and go to the
+web site \url{http://localhost:4250/answers.html}. Does your new web site look
+correct? If not, then continue to edit and convert it until the files are
+correct. Once the web site's content is correct, please reflect on this process.
+As you iteratively complete this assignment, you should regularly commit to your
+GitHub repository, following the steps in the next section. Also, note that your
+web server will require a dedicated terminal when it is running. Now, reflect on
+the entire process. What step did you find to be the most challenging? Why? You
+should write your reflections in a file, called \reflection{}, that also uses
+the Markdown writing language. To complete this aspect of the assignment, you
+should write one high-quality paragraph that reports on your experiences. Now,
+verbally share your experiences with another class member and the course
+instructor and at least one the teaching assistants!
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
-The Markdown file that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
-\url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
-Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
-\url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets the standards for correctness. For instance, GatorGrader will check to
-ensure that \mainprogram{} has the required four subsections created with the \command{##} code.
+The Markdown file that contains your reflection must adhere to the standards
+described in the Markdown Syntax Guide
+\url{https://guides.github.com/features/mastering-markdown/}. Finally, your
+\reflection{} file should adhere to the Markdown standards established by the
+\step{Markdown linting} tool available at
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, the GatorGrader tool that you will use in this
+laboratory assignment makes it easy for you to automatically check if your
+submission meets the standards for correctness. For instance, GatorGrader will
+check to ensure that \mainprogram{} has the required five subsections created
+with the \command{##} code. It will also check to ensure that you create the
+required number of fenced source code blocks.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your static web site displays correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please read
-the messages in your terminal and try to determine why, asking a teaching assistant or the course instructor for
-assistance, if necessary.
+To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal window. Once this step completes you can type
+\gatorgradercheck{}. If your work does not meet all of the assignment's
+requirements, then you will see the following output in your terminal:
+\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
+mistakes in your assignment, then you will need to review GatorGrader's output,
+find the mistake, and try to fix it. Once your static web site displays
+correctly, fulfilling at least some of the assignment's requirements, you should
+transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands.
+For example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
+checking to see that the transfer to GitHub is successful. If you notice that
+transferring your code or writing to GitHub did not work, then please read the
+messages in your terminal and try to determine why, asking the course instructor
+for assistance, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
