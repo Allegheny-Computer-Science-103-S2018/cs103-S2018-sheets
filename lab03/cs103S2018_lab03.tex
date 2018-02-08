@@ -168,17 +168,14 @@ development project.
 \section*{Reading Assignment}
 
 If you have not done so already, please read all of the relevant ``GitHub
-Guides'', available at \url{https://guides.github.com/}, that explain how to use
-many of the features that GitHub provides. In particular, make sure that you
-have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects
-on GitHub''; each of them will help you to understand how to use both GitHub and
-GitHub Classroom. To do well on this assignment, you should also read Chapters 1
-and 2 in the course textbook, paying close attention to Sections 2.3 through
-2.6, Figures 2.14 and 2.15, and Table 2.1. Students should also review the
-Pandoc manual available at \url{https://github.com/jgm/pandoc} and the
-description of Markdown styles at
-\url{https://github.com/otsaloma/markdown-css}. Please see the course instructor
-or a teaching assistant if you have questions these reading assignments.
+Guides'', available at \url{https://guides.github.com/}, that explain how to
+use many of the features that GitHub provides. In particular, make sure that
+you have read guides such as ``Mastering Markdown'' and ``Documenting Your
+Projects on GitHub''; each of them will help you to understand how to use both
+GitHub and GitHub Classroom. To do well on this assignment, you should also
+read Chapters 1 and 3 in the course textbook, paying close attention to Section
+3.5 and Figure 3.9. Please see the course instructor or a teaching assistant if
+you have questions these reading assignments.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
@@ -192,7 +189,7 @@ to access your new GitHub repository for this assignment, please click the green
 ``Accept'' button and then click the link that is prefaced with the label ``Your
 assignment has been created here''. If you accepted the assignment and correctly
 followed these steps, you should have created a repository with a name like
-``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-2-gkapfham''.
+``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-3-gkapfham''.
 Unless you provide the course instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
@@ -211,7 +208,7 @@ course instructor ran the \command{git clone} command in the terminal, it would
 look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-2-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-3-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -224,96 +221,25 @@ many files, including two cascading style sheet (CSS) files. Spend some time
 exploring, sharing your discoveries with a neighbor and a \mbox{teaching
 assistant}.
 
-\section*{Creating a Web Site Using Markdown and Style Sheets}
+\section*{Creating a Web Site with HTML}
 
-In order view the source code of a web site or a Markdown-based writing
-assignment, you need a text editor. Since it is a powerful text editor known for
-helping computer scientists ``edit text at the speed of thought'', in this class
-we will often use the text editor called \command{gvim}. Today, you will view
-and improve web site source code in {\tt gvim}. Making sure you are in the
-directory for this assignment, you should type \command{gvim
-src/www/html/answers.md} in your terminal. This should cause a new window, the
-\program{gvim} text editor, to appear on your screen. Remember, since
-\program{gvim} is a modal editor, you may notice that if you start typing,
-nothing appears (unless you happen to hit certain letters such as \command{i},
-\command{o}, \command{a}, and a few others). This is because you are not in
-``insert mode.'' To get into insert mode, just type the letter \command{i}
-(lower case). Once you do this, the window should show the word
-\command{--INSERT--} in the lower left corner. Students who are having
-difficulties learning how to use \command{gvim} should keep trying---but you can
-also use the Atom text editor in this class.
-
-This laboratory assignment invites you to implement a web site that displays
-headers, subheaders, paragraphs, links, inline code segments, ``fenced'' code
-segments, and a table. Please refer to your ``Markdown Syntax'' guide for
-examples of each of these Markdown source code constructs. To continue the
-assignment, you should edit the header at the top of the file to include your
-name. Next, you should go below the header and, keeping a space between it and
-your paragraph, write a paragraph that links to the Pandoc manual available at
-\url{https://pandoc.org/MANUAL.html}, explaining one thing that you learned
-about Pandoc. Your introductory paragraph should also acknowledge, this time
-with a link to \url{https://github.com/otsaloma/markdown-css}, that you are
-using externally provided cascading style sheets to influence the display of the
-generated HTML.
-
-You will notice that the \mainprogram{} also asks you to refer to source code
-in both an ``inline'' and ``fenced'' fashion. This first type of formatting
-will allow you to refer to the name of a file and see it appear in a distinct
-font. For instance, a filename that is surrounded by backticks would be
-displayed as an inline code segment. Alternatively, a fenced code segment
-starts with three backticks, includes source code or program output, and then
-concludes with three more backticks. For instance, you will use fenced code to
-display terminal commands in your web site. Your \mainprogram{} should also
-include a table that reports on your understanding of the content in Table 2.1
-of your textbook. Specifically, you should pick at least three error codes and
-explain them using a Markdown table with the same format as Table 2.1. Please
-refer to the ``Markdown Syntax'' guide for useful examples and talk with the
-instructor if you have questions about using these constructs.
-
-Whenever you are finished typing text in \program{gvim}, press the ESC key
-located in the upper left corner of the keyboard. This should remove the word
-\command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if
-you would like to use the keyboard to save your file, you can press
-\command{:w} when you are not in insert mode. Leaving the {\tt gvim} window
-open, go back to your terminal window. Now, you are ready to use the tool that
-converts your Markdown file into HTML and run a web server to make your web
-site available in a browser. To convert your Markdown, make sure that you are
-in the ``home directory'' of your GitHub repository and type one the following
-commands. Note that these commands are different than what you used in a
-previous laboratory assignment because they specify that output must adhere to
-the HTML5 standard and apply a cascading style sheet in a single (i.e.,
-``self-contained'') file. Please notice that the specifying a different
-\command{--css} argument will cause the style of the generated HTML to vary.
-Now, let's view this web site in different styles!
-
-\vspace*{-.05in}
-
-\begin{verbatim}
-pandoc src/www/html/answers.md \
-       --output=src/www/html/answers.html \
-       --to=html5 \
-       --css=src/www/css/github.css \
-       --self-contained \
-       --smart
-\end{verbatim}
-
-\vspace*{-.2in}
-
-\begin{verbatim}
-pandoc src/www/html/answers.md \
-       --output=src/www/html/answers.html \
-       --to=html5 \
-       --css=src/www/css/tufte.css \
-       --self-contained \
-       --smart
-\end{verbatim}
-
-\vspace*{-.05in}
+This laboratory assignment invites you to implement a web site using the HTML
+programming language. Specifically, you will create a travel photographs web
+site that looks like the one in Figure 3.9. Please refer to your GitHub
+repository for a screenshot that shows what you web site should look like when
+completed. To complete this assignment, you should first find an image on Flickr
+that is released under a Creative Commons license. Then, you should include that
+image in your web site, making sure that you provide a link to the image, the
+person who created the image, and the image's license. Moreover, the title of
+the web site should be ``Share Your Travels'' and the name of the photograph
+should be displayed as a level-two header. Finally, the end of the web site
+should contain at least two reviews of the photograph. Students should check the
+correctness of their HTML by running the command \command{htmlhint
+src/www/travels.html} in their terminal window.
 
 Now, you can run your web server by typing the command \command{serve
-src/www/html 4250}. At this point, you can start your web browser and go to the
-web site \url{http://localhost:4250/answers.html}. Does your new web site look
+src/www 4250}. At this point, you can start your web browser and go to the
+web site \url{http://localhost:4250/travels.html}. Does your new web site look
 correct? If not, then continue to edit and convert it until the files are
 correct. As you iteratively complete this assignment, you should regularly
 commit files to your GitHub repository, using the ``Git Cheat Sheet'' and
@@ -340,9 +266,8 @@ of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 laboratory assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
-check to ensure that \mainprogram{} has the required five subsections created
-with the \command{##} code. It will also check to ensure that you create the
-required number of fenced source code blocks.
+check to ensure that \mainprogram{} has the required sections and photograph
+reviews.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
@@ -393,7 +318,7 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
   for it.
 
 \item A properly formatted and correct version of \mainprogramsource{} that both meets all of the established
-  requirements and produces the correct HTML and the desired static web site.
+  requirements and contains the correct HTML and the desired static web site.
 
 \end{enumerate}
 
