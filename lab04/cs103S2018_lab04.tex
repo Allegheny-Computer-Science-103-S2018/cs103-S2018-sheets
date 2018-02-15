@@ -222,7 +222,7 @@ What do you think is their purpose? Please note that this assignment includes an
 HTML file with starting tags and a basic template. Spend some time exploring
 this file, sharing your discoveries with a \mbox{teaching assistant}.
 
-\section*{Creating a Web Site with HTML}
+\section*{Creating an Enhanced Web Site with HTML and CSS}
 
 This laboratory assignment invites you to implement a web site using the HTML
 programming language. Specifically, you will create an extended version of the
@@ -236,18 +236,42 @@ on the web site. You can achieve this step by adding the code \program{<link
 href="css/github.css" rel="stylesheet">} to the \program{<head>} region of the
 \mainprogramsource{} file. Note that you also need to have another line of
 source code to load the \program{emoji.css} file and its features for including
-an emoji in a web site. How would you write that line of HTML source code?
+an emoji in a web site. How would you write that line of HTML source code? You
+can refer to Figure~\ref{fig:css} for an example of how to include the two
+required CSS files in your \mainprogramsource{} file. Please see the course
+instructor if you have any questions about this step.
 
 At this point, you are ready to add, in the \program{<body>} region of the
-\mainprogram{}, the code needed to display the provided image that is in the
-\program{img/} directory. Can you find the source code location where this file
-name and directory must be included?
+\mainprogram{} file, the code needed to display the provided image that is in
+the \program{img/} directory. Can you find the source code location where this
+file name and directory must be included? Using the textbook's content in Figure
+3.16 and Table 3.1, can you write the correct source code that includes the
+image? Now, you are ready to add the five reviews of the photograph.
+Figure~\ref{fig:code} gives an example of the HTML source code that will create
+the first review. You should include a customized version of this source code in
+your own web site, changing the name, time, and emoji to appropriate values. To
+learn more about each emoji that is available for inclusion in your web site,
+please visit \url{https://afeld.github.io/emoji-css/}. Ultimately, your web site
+should contain at least five photograph reviews that follow the format given in
+Figure~\ref{fig:code}. Finally, students should check the correctness of their
+HTML by running the command \command{htmlhint src/www/index.html} in their
+terminal window. If the web site displays incorrectly, please discuss the
+problems with a teaching assistant or the course instructor.
 
-Finally, the
-end of the web site should contain at least five reviews of the photograph.
-
-Students should check the correctness of their HTML by running the command
-\command{htmlhint src/www/index.html} in their terminal window.
+\begin{figure}[t]
+  \centering
+  \begin{verbatim}
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="css/github.css" rel="stylesheet">
+    <link href="css/emoji.css" rel="stylesheet">
+    <title>Share Your Travels</title>
+  </head>
+  \end{verbatim}
+  \vspace*{-.35in}
+  \caption{The Source Code for Loading the CSS in the \mainprogram{} File.}~\label{fig:css}
+\end{figure}
 
 \begin{figure}[t]
   \centering
