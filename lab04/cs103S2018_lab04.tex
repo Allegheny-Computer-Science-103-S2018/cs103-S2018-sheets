@@ -225,22 +225,47 @@ this file, sharing your discoveries with a \mbox{teaching assistant}.
 \section*{Creating a Web Site with HTML}
 
 This laboratory assignment invites you to implement a web site using the HTML
-programming language. Specifically, you will create a travel photographs web
-site that looks like the one in Figure 3.9. Please refer to your GitHub
-repository for a screenshot that shows what you web site should look like when
-completed. To complete this assignment, you should first find an image on Flickr
-that is released under a Creative Commons license. Then, you should include that
-image in your web site, making sure that you provide a link to the image, the
-person who created the image, and the image's license. Moreover, the title of
-the web site should be ``Share Your Travels'' and the name of the photograph
-should be displayed as a level-two header. Finally, the end of the web site
-should contain at least two reviews of the photograph. Students should check the
-correctness of their HTML by running the command \command{htmlhint
-src/www/index.html} in their terminal window.
+programming language. Specifically, you will create an extended version of the
+travel photographs web site that looks like the one in Figure 3.9. Please refer
+to your GitHub repository for a screenshot that shows what you web site should
+look like when completed. Specifically, please note that this assignment asks
+you to complete a web site that is more sophisticated than the one that you
+implemented for the last laboratory assignment. To start, you will need to
+include the cascading style sheet (CSS) that controls, for instance, the fonts
+on the web site. You can achieve this step by adding the code \program{<link
+href="css/github.css" rel="stylesheet">} to the \program{<head>} region of the
+\mainprogramsource{} file. Note that you also need to have another line of
+source code to load the \program{emoji.css} file and its features for including
+an emoji in a web site. How would you write that line of HTML source code?
+
+At this point, you are ready to add, in the \program{<body>} region of the
+\mainprogram{}, the code needed to display the provided image that is in the
+\program{img/} directory. Can you find the source code location where this file
+name and directory must be included?
+
+Finally, the
+end of the web site should contain at least five reviews of the photograph.
+
+Students should check the correctness of their HTML by running the command
+\command{htmlhint src/www/index.html} in their terminal window.
+
+\begin{figure}[t]
+  \centering
+  \begin{verbatim}
+    <blockquote>
+      <p><b>By Ricardo on <time>February 8, 2018</time></b></p>
+      <p>Wow, that is a great photograph. How did you take it?</p>
+      <p>I would describe this photograph as <i class="em em---1"></i> </p>
+    </blockquote>
+  \end{verbatim}
+  \vspace*{-.35in}
+  \caption{The Source Code for Including a Review in the \mainprogram{} File.}~\label{fig:code}
+  \vspace*{-.25in}
+\end{figure}
 
 Now, you can run your web server by typing the command \command{serve src/www
 4250}. At this point, you can start your web browser and go to the site
-\url{http://localhost:4250/index.html}. Does your new web site look correct?
+\url{http://localhost:4250/}. Does your new web site look correct?
 If not, then continue to edit and check it until the files are correct. As you
 iteratively complete this assignment, you should regularly commit files to your
 GitHub repository, using the ``Git Cheat Sheet'' and following the steps that
@@ -254,6 +279,23 @@ experiences. Now, verbally share your experiences with another class member and
 the course instructor and at least one the teaching assistants!
 
 \section*{Checking the Correctness of Your Web Site and Writing}
+
+\begin{figure}[t]
+  \centering
+  \begin{verbatim}
+  Thin 1.7.2 available at http://0.0.0.0:4250
+  Thin web server (v1.7.2 codename Bachmanity)
+  Maximum connections set to 1024
+  Listening on 0.0.0.0:4250, CTRL+C to stop
+  127.0.0.1 - - [15/Feb/2018 10:48:10] "GET / HTTP/1.1" 200 - 0.0021
+  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /css/github.css HTTP/1.1" 200 11629 0.0006
+  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /css/emoji.css HTTP/1.1" 200 390578 0.0012
+  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /img/plane.jpg HTTP/1.1" 200 22125 0.0005
+  \end{verbatim}
+  \vspace*{-.35in}
+  \caption{The Output From Running a Web Server.}~\label{fig:output}
+  \vspace*{-.25in}
+\end{figure}
 
 The Markdown file that contains your reflection must adhere to the standards
 described in the Markdown Syntax Guide
