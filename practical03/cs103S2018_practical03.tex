@@ -43,7 +43,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/www/answers.md -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/www/index.html -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -226,38 +226,26 @@ you see? What do you think is their purpose? Please ask questions if you have an
 
   \begin{verbatim}
 
-  ## Web Development Roles and Skills
-
-  * Front-end developer
-  * Hardware architect
-  * Product designer
-
-  ```
-  pandoc src/www/html/answers.md \
-        --output=src/www/html/answers.html \
-        --to=html5 \
-        --css=src/www/css/github.css \
-        --self-contained \
-        --smart
-  ```
-
-  ![The Labocat](https://octodex.github.com/images/labtocat.png "The Labocat")
+      <ul>
+        <li><a href="about.html" target="_blank">About</a></li>
+        <li><a href="software.html" target="_blank">Software</a></li>
+      </ul>
 
   \end{verbatim}
 
   \vspace*{-3em}
 
-  \caption{Some of the Segments of the Correct Markdown Source Code.}~\label{fig:correct}
+  \caption{Some of the Segments of the Correct HTML Source Code.}~\label{fig:correct}
 
   \vspace*{-2em}
 
 \end{figure}
 
-\section*{Repairing Markdown Mistakes in a Web Site}
+\section*{Creating Ordered and Unordered Lists in HTML}
 
 This practical assignment invites you to repair a web site that contains
 incorrect Markdown source code. You should use the \command{mdl
-src/www/answers.md} command and the GatorGrader tool to identify and fix all of
+src/www/index.html} command and the GatorGrader tool to identify and fix all of
 the mistakes in the provided Markdown file. Figure~\ref{fig:correct} gives some
 examples of how the correct source code should look in your \mainprogramsource{}
 file. Please remember that a ``linting'' tool is unlikely to point out all of
@@ -267,7 +255,7 @@ defect. Now, you are ready to practice using a tool that converts your Markdown
 file into HTML and run a web server to make your web site available in a
 browser. To convert your Markdown, make sure that you are in the ``home
 directory'' of your GitHub repository and type \command{pandoc
-src/www/answers.md -o src/www/answers.html}. You can now run your web server by
+src/www/index.html -o src/www/answers.html}. You can now run your web server by
 typing the command \command{serve src/www 4250}. At this point, you can start
 your web browser and go to the web site
 \url{http://localhost:4250/answers.html}. Does your new web site look correct?
