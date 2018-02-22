@@ -20,6 +20,9 @@
 \newcommand{\mainprogram}{\lstinline{index.html}}
 \newcommand{\mainprogramsource}{\lstinline{src/www/index.html}}
 
+\newcommand{\secondprogram}{\lstinline{site.css}}
+\newcommand{\secondprogramsource}{\lstinline{src/www/css/site.css}}
+
 % Edit this commands to describe key deliverables
 
 \newcommand{\reflection}{\lstinline{writing/reflection.md}}
@@ -327,17 +330,18 @@ As you can see from the screenshot provided in your GitHub repository, your site
 should have a section with links to external sites that provide travel tips.
 Specifically, your site should include links to the web sites mentioned in the
 following list. If you look at the provided screenshot you can see a suggestion
-for the content that you can include in these links. Finally, your CSS file
-needs to specify that the ordered list has a 1pt border on the top and left.
-Remember, you can refer to the source code sample in Figure~\ref{fig:css} and
-Figures 4.18 and 4.20 to learn more about how to correctly modify the CSS file
-to achieve this effect. Make sure that the CSS rules for the ordered list also
-specify the same margins and padding as was done for the \program{<blockquote>}.
-You also need to ensure that your site correctly uses the \program{<footer>} tag
-to create a footer following the example in Figure~\ref{fig:footer}. Remember,
-your footer should have a border on the bottom and right, as seen in the
-screenshot. Please talk to the instructor or a teaching assistant if you have
-questions about this step.
+for the content that you can include in these links. Also, using the technique
+that you learned in a previous assignment, these links should always open in a
+new browser tab. Finally, your CSS file needs to specify that the ordered list
+has a 1pt border on the top and left. Remember, you can refer to the source code
+sample in Figure~\ref{fig:css} and Figures 4.18 and 4.20 to learn more about how
+to correctly modify the CSS file to achieve this effect. Make sure that the CSS
+rules for the ordered list also specify the same margins and padding as was done
+for the \program{<blockquote>}. You also need to ensure that your site correctly
+uses the \program{<footer>} tag to create a footer following the example in
+Figure~\ref{fig:footer}. Remember, your footer should have a border on the
+bottom and right, as seen in the screenshot. Please talk to the instructor or a
+teaching assistant if you have any questions.
 
 % <li><a href="https://www.lonelyplanet.com/" target="_blank">Visit the Lonely Planet Site</a></li>
 % <li><a href="https://www.lonelyplanet.com/blog/" target="_blank">Read the Lonely Planet Blog</a></li>
@@ -360,7 +364,11 @@ web server, it produces output that is similar to (but perhaps not exactly the
 same as) that which is available in Figure~\ref{fig:output}. Do you see that
 your web server is returning two CSS files and an image? If not, then please
 make sure that you revise your HTML source code and/or check the configuration
-of your web server.
+of your web server. Specifically, please make sure that your web server is
+returning the \program{site.css} file that contains the styles for your HTML
+tags. Finally, when you are interacting with your web site you should verify
+that certain links  in your web site (i.e., the ones to the external travel
+sites) open in a new browser tab.
 
 As you iteratively complete this assignment, you should regularly commit files
 to your GitHub repository, using the ``Git Cheat Sheet'' and following the steps
@@ -368,14 +376,15 @@ that are described in the next section. Also, note that your web server will
 require a dedicated terminal when it is running. After completing the
 assignment, reflect on the entire process. What step did you find to be the most
 challenging? You should write your reflections in a file, called \reflection{},
-that also uses the Markdown language. To complete this aspect of the assignment,
-you should write one high-quality paragraph that reports on your experiences.
-Now, verbally share your experiences with another class member and the
-instructor and at least one the teaching assistants! Finally, please take the
-time to answer the other questions in the \reflection{} file. For instance, make
-sure that you understand and can explain how the HTML and CSS files work
-together to format the text and enable the display of an emoji in the fives
-reviews given below the photograph.
+that also uses Markdown. To complete this part of the assignment, you should
+write one high-quality paragraph that reports on your experiences. Now, verbally
+share your experiences with another class member and the instructor and at least
+one the teaching assistants! Finally, please take the time to answer the other
+questions in the \reflection{} file. For instance, make sure that you understand
+and can explain how the HTML and CSS files work together to format the text and
+enable the display of an emoji in the reviews below the photograph. You should
+also be able to explain how you specified the two fonts and used CSS to style
+the \program{<blockquote>} tags.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
@@ -445,8 +454,10 @@ towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables. Overall, your submitted web
+site should match the screenshot provided in your GitHub repository.
 
 \begin{enumerate}
 
@@ -459,6 +470,10 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 \item A properly formatted and correct version of \mainprogramsource{} that both
   meets all of the established requirements and contains the correct HTML and
   the desired static web site.
+
+\item A properly formatted and correct version of \secondprogramsource{} that
+  both meets all of the established requirements and contains the correct CSS to
+  style the static web site.
 
 \end{enumerate}
 
