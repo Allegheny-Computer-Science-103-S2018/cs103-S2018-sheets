@@ -6,7 +6,7 @@
 
 \newcommand{\assignmentduedate}{March 1}
 \newcommand{\assignmentassignedate}{February 22}
-\newcommand{\assignmentnumber}{Four}
+\newcommand{\assignmentnumber}{Five}
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Thursday}
@@ -193,7 +193,7 @@ to access your new GitHub repository for this assignment, please click the green
 ``Accept'' button and then click the link that is prefaced with the label ``Your
 assignment has been created here''. If you accepted the assignment and correctly
 followed these steps, you should have created a repository with a name like
-``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-4-gkapfham''.
+``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-5-gkapfham''.
 Unless you provide the course instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
@@ -212,7 +212,7 @@ course instructor ran the \command{git clone} command in the terminal, it would
 look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-4-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-5-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -263,29 +263,20 @@ problems with a teaching assistant or the course instructor.
 \begin{figure}[t]
   \centering
   \begin{verbatim}
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link href="css/github.css" rel="stylesheet">
-    <link href="css/emoji.css" rel="stylesheet">
-    <title>Share Your Travels</title>
-  </head>
-  \end{verbatim}
-  \vspace*{-.35in}
-  \caption{The Source Code for Loading the CSS in the \mainprogram{} File.}~\label{fig:css}
-\end{figure}
+    body h1, h2, h3 {
+      font-family: "Merriweather", serif;
+    }
 
-\begin{figure}[t]
-  \centering
-  \begin{verbatim}
-    <blockquote>
-      <p><b>By Ricardo on <time>February 8, 2018</time></b></p>
-      <p>Wow, that is a great photograph. How did you take it?</p>
-      <p>I would describe this photograph as <i class="em em---1"></i> </p>
-    </blockquote>
+    body blockquote {
+      border: solid #777;
+      border-width: 1pt 0pt 0pt 1pt;
+      margin: 30px;
+      padding: 10px 10px 10px 30px;
+    }
   \end{verbatim}
   \vspace*{-.35in}
-  \caption{The Source Code for Including a Review in the \mainprogram{} File.}~\label{fig:code}
+  \caption{The Source Code for Specifying the Header Font Family and the
+  Blockquote Style.}~\label{fig:css}
   \vspace*{-.25in}
 \end{figure}
 
@@ -322,14 +313,14 @@ reviews given below the photograph.
 \begin{figure}[t]
   \centering
   \begin{verbatim}
-  Thin 1.7.2 available at http://0.0.0.0:4250
-  Thin web server (v1.7.2 codename Bachmanity)
-  Maximum connections set to 1024
-  Listening on 0.0.0.0:4250, CTRL+C to stop
-  127.0.0.1 - - [15/Feb/2018 10:48:10] "GET / HTTP/1.1" 200 - 0.0021
-  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /css/github.css HTTP/1.1" 200 11629 0.0006
-  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /css/emoji.css HTTP/1.1" 200 390578 0.0012
-  127.0.0.1 - - [15/Feb/2018 10:48:11] "GET /img/plane.jpg HTTP/1.1" 200 22125 0.0005
+    Thin 1.7.2 available at http://0.0.0.0:4250
+    Thin web server (v1.7.2 codename Bachmanity)
+    Maximum connections set to 1024
+    Listening on 0.0.0.0:4250, CTRL+C to stop
+    127.0.0.1 - - [22/Feb/2018 11:46:22] "GET / HTTP/1.1" 200 - 0.0020
+    127.0.0.1 - - [22/Feb/2018 11:46:22] "GET /css/site.css HTTP/1.1" 304 - 0.0004
+    127.0.0.1 - - [22/Feb/2018 11:46:22] "GET /css/emoji.css HTTP/1.1" 304 - 0.0003
+    127.0.0.1 - - [22/Feb/2018 11:46:22] "GET /img/plane.jpg HTTP/1.1" 304 - 0.0006
   \end{verbatim}
   \vspace*{-.35in}
   \caption{The Output From Running a Web Server.}~\label{fig:output}
@@ -390,7 +381,7 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 \begin{enumerate}
 
-\setlength{\itemsep}{0in}
+  \setlength{\itemsep}{0in}
 
 \item Stored in \reflection{}, a one-paragraph answer to all of the stated
   questions. For every challenge that you encountered, please explain your
