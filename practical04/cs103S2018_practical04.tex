@@ -21,6 +21,9 @@
 \newcommand{\mainprogram}{\lstinline{index.html}}
 \newcommand{\mainprogramsource}{\lstinline{src/www/index.html}}
 
+\newcommand{\secondprogram}{\lstinline{site.css}}
+\newcommand{\secondprogramsource}{\lstinline{src/www/css/site.css}}
+
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
@@ -172,13 +175,13 @@ towards correctly completing the project.
 
 If you have not done so already, please read all of the relevant ``GitHub
 Guides'', available at \url{https://guides.github.com/}, that explain how to use
-many of the features that GitHub provides. In particular, please make sure that
-you have read guides such as ``Mastering Markdown'' and ``Documenting Your
-Projects on GitHub''; each of them will help you to understand how to use both
-GitHub and GitHub Classroom. To do well on this assignment, you should also read
-Chapters 1 through 3 in the course textbook, also paying close attention to
-Section 3.5 and Listing 3.2. Please see the instructor or one of the teaching
-assistants if you have questions these reading assignments.
+many of the features that GitHub provides. In particular, make sure that you
+have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects
+on GitHub''; each of them will help you to understand how to use GitHub. To do
+well on this assignment, you should also review Chapters 1 and 4 in the course
+textbook, paying close attention to Sections 4.1 through 4.7, Figures 4.6, 4.18,
+4.20, and 4.31, and Table 4.9. Please see the course instructor or a teaching
+assistant if you have questions these reading assignments.
 
 \section*{Accessing the Practical Assignment on GitHub}
 
@@ -189,7 +192,7 @@ assignment's starting materials and to store the completed version of your assig
 repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced with
 the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these steps,
 you should have created a repository with a name like
-``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-practical-3-gkapfham''. Unless you provide
+``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-practical-4-gkapfham''. Unless you provide
 the course instructor with documentation of the extenuating circumstances that you are facing, not accepting the
 assignment means that you automatically receive a failing grade for it.
 
@@ -204,7 +207,7 @@ download all of the code for this assignment. For instance, if the course instru
 in the terminal, it would look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-practical-3-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-practical-4-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new directory. What files and directories do
@@ -212,66 +215,60 @@ you see? What do you think is their purpose? Please ask questions if you have an
 
 \begin{figure}[t]
   \centering
-
   \begin{verbatim}
-      <ul>
-        <li><a href="about.html" target="_blank">About</a></li>
-        <li><a href="software.html" target="_blank">Software</a></li>
-      </ul>
+    body {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      color: #333;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      word-wrap: break-word;
+      width: 728px;
+      [ NOTE: additional lines deleted to save space ]
+    }
   \end{verbatim}
-
-  \vspace*{-.25in}
-  \begin{center}
-    (a) Create an unordered lists that has links that open in a new browser tab.
-  \end{center}
-
-  \begin{verbatim}
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="software.html">Software</a></li>
-      </ul>
-  \end{verbatim}
-
-  \vspace*{-.25in}
-  \begin{center}
-    (a) Create an unordered lists that has links that do not open in a new browser tab.
-  \end{center}
-
-  \caption{Segments of Correct HTML Source Code.}~\label{fig:correct}
-
+  \vspace*{-3em}
+  \caption{A Segment of Correct CSS Source Code that Styles the HTML File.}~\label{fig:correct}
   \vspace*{-2em}
-
 \end{figure}
 
-\section*{Creating Ordered and Unordered Lists of Links}
+\section*{Creating a Professional Biography with a Photograph}
 
-This practical assignment invites you to create ordered and unordered lists that
-link to other local files in a web site. Before you start to create these lists
-you should first include the cascading style sheet (CSS) files that you used in
-the previous laboratory assignment. Now, you are ready to create the lists that
-will link to the \program{about.html} and \program{software.html} files.
-Specifically, you will create both ordered and unordered lists that have links
-that both do and do not open in a new browser tab. For instance,
-Figure~\ref{fig:correct} furnishes an example of HTML source code segments that
-will create unordered lists with links that both do and do not open in different
-tabs. Can you add this source code to the correct location in the
-\mainprogramsource{} file? You will also need to ensure that the default
-document contains an ordered list that links to the same HTML files in the same
-fashion. Finally, don't forget to use the \command{<footer>} tag to add at least
-two emoji and your name to the bottom of the web site. In summary, you can learn
-what code you need to add to the \mainprogram{} file by reading all of the
-\command{TODO} comments in the source code and talking with the instructor.
+This practical assignment invites you to create a web site that features your
+name, a professional photograph, and professional biography. You will need to
+take your photograph using a mobile device, email that photograph to yourself,
+and download it to your web site's GitHub repository, ensuring that you save it
+with the correct file name. Then, you will need to write a professional
+biography and include it in the correct location of the \mainprogram{}. Now, you
+should make sure that you use the ``Roboto Slab'' font for your headers and the
+``Montserrat'' font for the words in the body of your web site. For instance,
+Figure~\ref{fig:correct} furnishes an example of the CSS source code that will
+style your web site's body to use the correct font. Now, you should modify the
+provided CSS file so that it specifies \command{border-width: 1pt 1pt 1pt 1pt;}
+and \command{padding: 10px 10px 10px 20px;} for the styling of the
+\program{<blockquote>}. This should create a thin border on all sides of the
+part of your site that includes your professional biography. Finally, don't
+forget to use the \command{<footer>} tag to add at least two emoji and your name
+to the bottom of the web site. You should also use CSS source code to style your
+\command{<footer>} so that it contains a thin border on all of its sides.
 
-You can now run your web server by typing the command \command{serve src/www
-4250}. At this point, you can start your web browser and go to the web site
+In summary, you can learn what code you need to add to the \mainprogram{} file
+by reading all of the \command{TODO} comments in the source code and talking
+with the course instructor. Once you have completed all of the required steps,
+you can run your web server by typing the command \command{serve src/www 4250}.
+At this point, you can start your web browser and go to the web site
 \url{http://localhost:4250/}. Does your new web site look correct? Can you see
-the lists? Do the links work? Do the emoji correctly appear in the footer? If
-not, then continue to edit and convert it until the files are correct. Since
-this is our third practical assignment and you are still learning how to use the
-appropriate hardware and software, don't become frustrated if you make a
-mistake. Instead, use your mistakes as an opportunity for learning both about
-the necessary web development technology and the background and expertise of the
-other students in the class, the teaching assistants, and the course instructor.
+the required content with the right style? You can compare your site to the one
+that the course instructor created. If parts of you site are not displaying
+correctly, then continue to edit and improve it until the files are correct.
+
+% Since this is our third practical assignment and you are still learning how to
+% use the appropriate hardware and software, don't become frustrated if you make
+% a mistake. Instead, use your mistakes as an opportunity for learning both
+% about the necessary web development technology and the background and
+% expertise of the other students in the class, the teaching assistants, and the
+% course instructor.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
@@ -286,8 +283,8 @@ of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 practical assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
-check to ensure that \mainprogram{} has the required number of unordered lists
-created with the \command{<ul>} code.
+check that \mainprogram{} has the required image and biography and loads the
+fonts from Google Web Fonts.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
@@ -332,10 +329,17 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 \setlength{\itemsep}{0in}
 
-\item A properly formatted and correct version of \mainprogramsource{} that both meets all of the established
-  requirements and produces the correct HTML and the desired static web site.
+\item A properly formatted and correct version of \mainprogramsource{} that both
+  meets all of the established requirements and produces the correct HTML and
+  the desired static web site.
+
+\item A properly formatted and correct version of \secondprogramsource{} that
+  both meets all of the established requirements and contains the correct CSS to
+  style the static web site.
 
 \end{enumerate}
+
+\vspace*{-1em}
 
 \section*{Evaluation of Your Practical Assignment}
 
