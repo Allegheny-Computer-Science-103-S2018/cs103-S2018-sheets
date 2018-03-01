@@ -275,8 +275,11 @@ of these features. For instance, you will need to use and style the
 \program{<blockquote>} and \program{<footer>} tags in your web site's source
 code. Remember, your footer should have a border on the bottom and right, as
 seen in the screenshot. Please talk to the instructor or a teaching assistant if
-you have any questions.
-
+you have any questions. Now, you are ready to add in the new features that are
+unique to this assignment. First, you should add the \program{<table>} tag and
+all of the header, row, and cell markup tags so that you can produce a table
+that looks like the one in the screenshot. To learn more about these tags you
+can review Section 5.1 content in the textbook.
 
 % At this point, you are ready to add, in the \program{<body>} region of the
 % \mainprogram{} file, the code needed to display the provided image that is in
@@ -292,33 +295,42 @@ you have any questions.
 % should contain at least five photograph reviews that follow the format given in
 % Figure~\ref{fig:code}.
 
-Finally, students should check the correctness of their HTML by running the
-command \command{htmlhint src/www/index.html} in their terminal window. If the
-web site displays incorrectly, please discuss the problems with a teaching
-assistant or the course instructor.
+Once you have added the table and verified that the contents are correct, you
+are ready to modify the CSS rules in the \secondprogram{} file. First, you need
+to style the \program{<table>} tab and table headers by using the source code
+provided in Figure~\ref{fig:css}. Now, you should add more CSS code that will
+ensure that all of the cells in the table displayed their textual content in a
+centered fashion. You should also review the textbook's content in Section 5.2.2
+to learn how to style the table's rows so that they exhibit a ``zebra effect''.
+Then, you should style the table's cells so that they have a dark grey
+background and white text when a mouse hovers over them. To accomplish these
+tasks you will need to search online and read the textbook to learn more about
+\program{nth-child} and \program{td:hover}.
 
+% Finally, students should remember to check the correctness of their HTML by
+% running the command \command{htmlhint src/www/index.html} in their terminal
+% window. If the web site displays incorrectly, please discuss the problems with a
+% teaching assistant or the course instructor.
 
 Now, you can run your web server by typing the command \command{serve src/www
 4250}. At this point, you can start your web browser and go to the site
-\url{http://localhost:4250/}. Please notice that when you access the web site
-in this fashion, you do not need to specify the specific HTML file. Why is this
-the case? Once you understand the answer to this question, please check to see
-if your new web site looks correct. If it is not, then continue to edit and
-check it until the files are correct. You should also ensure that, when you run
-the web server, it produces output suggesting that it is returning three CSS
-files and an image? If not, then please make sure that you revise your HTML
-source code and/or check the configuration of your web server. Specifically,
-please make sure that your web server is returning the \program{site.css} and
-\program{table.css} files that contain the styles for your HTML tags. Finally,
-when you are interacting with your web site you should verify that certain
-links  in your web site (i.e., the ones to the external travel sites) open in a
-new browser tab.
+\url{http://localhost:4250/}. Please check to see if your new web site looks
+correct. If it is not, then continue to edit and check it until the files are
+correct. You should also ensure that, when you run the web server, it produces
+output suggesting that it is returning three CSS files and an image? If not,
+then please make sure that you revise your HTML source code and/or check the
+configuration of your web server. Specifically, please make sure that your web
+server is returning the \program{site.css} and \program{table.css} files that
+contain the styles for your HTML. Finally, when you are interacting with your
+web site you should verify that certain links in your web site open in a new
+browser tab and the table's cells change color when you hover over them. Please
+see the course instructor if you have questions about the CSS or HTML code.
 
-As you iteratively complete this assignment, you should regularly commit files
-to your GitHub repository, using the ``Git Cheat Sheet'' and following the steps
-that are described in the next section. Also, note that your web server will
-require a dedicated terminal when it is running. After completing the
-assignment, reflect on the entire process. What step did you find to be the most
+As you complete this assignment, you should regularly commit files to your
+GitHub repository, using the ``Git Cheat Sheet'' and following the steps that
+are described in the next section. Also, note that your web server will require
+a dedicated terminal when it is running. After completing the assignment,
+reflect on the entire process. What step did you find to be the most
 challenging? You should write your reflections in a file, called \reflection{},
 that also uses Markdown. To complete this part of the assignment, you should
 write one high-quality paragraph that reports on your experiences. Now, verbally
@@ -327,8 +339,8 @@ one the teaching assistants! Finally, please take the time to answer the other
 questions in the \reflection{} file. For instance, make sure that you understand
 and can explain how the HTML and CSS files work together to format the text and
 enable the display of an emoji in the reviews below the photograph. You should
-also be able to explain how you specified the two fonts and used CSS to style
-the \program{<blockquote>} tags.
+also be able to explain how you used CSS to style the \program{<table>} tag and
+enhance a user's interaction with tabular data.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
