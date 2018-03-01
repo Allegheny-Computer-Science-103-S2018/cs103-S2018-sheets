@@ -20,8 +20,8 @@
 \newcommand{\mainprogram}{\lstinline{index.html}}
 \newcommand{\mainprogramsource}{\lstinline{src/www/index.html}}
 
-\newcommand{\secondprogram}{\lstinline{site.css}}
-\newcommand{\secondprogramsource}{\lstinline{src/www/css/site.css}}
+\newcommand{\secondprogram}{\lstinline{table.css}}
+\newcommand{\secondprogramsource}{\lstinline{src/www/css/table.css}}
 
 % Edit this commands to describe key deliverables
 
@@ -227,7 +227,7 @@ What do you think is their purpose? Please note that this assignment includes
 both an HTML and a CSS file with starting content. Spend some time exploring
 these files, sharing your discoveries with a \mbox{teaching assistant}.
 
-\section*{Creating a Web Site with HTML and Customized CSS}
+\section*{Displaying Tabular Data with HTML and Customized CSS}
 
 This laboratory assignment invites you to implement a web site using the HTML
 programming language. Specifically, you will create an extended version of the
@@ -248,20 +248,22 @@ line of HTML source code?
 \begin{figure}[t]
   \centering
   \begin{verbatim}
-    body h1, h2, h3 {
-      font-family: "Merriweather", serif;
-    }
+  table {
+    color: #333;
+    width: 600px;
+    border: solid #777;
+    border-width: 1pt 0pt 0pt 1pt;
+    border-spacing: 0;
+    margin: 30px;
+    padding: 5px 5px 5px 5px;
+  }
 
-    body blockquote {
-      border: solid #777;
-      border-width: 1pt 0pt 0pt 1pt;
-      margin: 30px;
-      padding: 10px 10px 10px 30px;
-    }
+  th {
+    font-weight: bold;
+  }
   \end{verbatim}
   \vspace*{-.35in}
-  \caption{The Source Code for Specifying the Header Font Family and the
-  Blockquote Style.}~\label{fig:css}
+  \caption{The CSS Source Code for Styling the Table and the Table Header.}~\label{fig:css}
   \vspace*{-.25in}
 \end{figure}
 
