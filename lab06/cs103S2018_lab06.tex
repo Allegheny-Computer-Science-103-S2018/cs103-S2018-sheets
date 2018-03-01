@@ -230,20 +230,21 @@ these files, sharing your discoveries with a \mbox{teaching assistant}.
 \section*{Displaying Tabular Data with HTML and Customized CSS}
 
 This laboratory assignment invites you to implement a web site using the HTML
-programming language. Specifically, you will create an extended version of the
+and CSS programming languages, building on the work that you completed during
+previous assignments. Specifically, you will create an extended version of the
 travel photographs web site that looks like the one in Figure 3.9. Please refer
-to your GitHub repository for a screenshot that shows what you web site should
-look like when completed. Specifically, please note that this assignment asks
-you to complete a web site that is more sophisticated than the one that you
-implemented for the last two assignments. Overall, you will need to read and
-resolve all of the \command{TODO} markers in the provided HTML and CSS files. To
-start, you should include the cascading style sheet (CSS) that controls, for
-instance, the font sizes on the site. You can achieve this step by adding the
-code \program{<link href="css/site.css" rel="stylesheet">} to the
-\program{<head>} region of the \mainprogramsource{} file. Note that you also
-need to have another line of source code to load the \program{emoji.css} file
-and its features for including an emoji in a web site. How would you write that
-line of HTML source code?
+to your GitHub repository for a screenshot that shows what your final web site
+should look like when completed. Specifically, please note that this assignment
+asks you to complete a web site that contains an HTML table that you style with
+CSS. Overall, you will need to read and resolve all of the \command{TODO}
+markers in the provided HTML and CSS files. To start, you should include the
+cascading style sheet (CSS) that controls, for instance, the font sizes on the
+site. You can achieve this step by adding the code \program{<link
+href="css/site.css" rel="stylesheet">} to the \program{<head>} region of the
+\mainprogramsource{} file. Note that you also need to have another line of
+source code to load the \program{emoji.css} and \program{table.css} files and
+their features for further styling the web site. How would you write these lines
+in the \program{<head>} region of the HTML source code?
 
 \begin{figure}[t]
   \centering
@@ -267,6 +268,16 @@ line of HTML source code?
   \vspace*{-.25in}
 \end{figure}
 
+As you can see from the screenshot provided in your GitHub repository, your site
+should have content like you added in a previous assignment. You can include
+source code from another GitHub repository to ensure that your web site has all
+of these features. For instance, you will need to use and style the
+\program{<blockquote>} and \program{<footer>} tags in your web site's source
+code. Remember, your footer should have a border on the bottom and right, as
+seen in the screenshot. Please talk to the instructor or a teaching assistant if
+you have any questions.
+
+
 % At this point, you are ready to add, in the \program{<body>} region of the
 % \mainprogram{} file, the code needed to display the provided image that is in
 % the \program{img/} directory. Can you find the source code location where this
@@ -281,27 +292,11 @@ line of HTML source code?
 % should contain at least five photograph reviews that follow the format given in
 % Figure~\ref{fig:code}.
 
-Finally, students should check the correctness of their
-HTML by running the command \command{htmlhint src/www/index.html} in their
-terminal window. If the web site displays incorrectly, please discuss the
-problems with a teaching assistant or the course instructor.
+Finally, students should check the correctness of their HTML by running the
+command \command{htmlhint src/www/index.html} in their terminal window. If the
+web site displays incorrectly, please discuss the problems with a teaching
+assistant or the course instructor.
 
-As you can see from the screenshot provided in your GitHub repository, your
-site should have a section with links to external sites that provide travel
-tips. Specifically, your site should include links to the web sites mentioned
-in the following list. If you look at the provided screenshot you can see a
-suggestion for the content that you can include in these links. Also, using the
-technique that you learned in a previous assignment, these links should always
-open in a new browser tab. Finally, your CSS file needs to specify that the
-ordered list has a 1pt border on the top and left. Remember, you can refer to
-the source code sample in Figure~\ref{fig:css} and Figures 4.18 and 4.20 to
-learn more about how to correctly modify the CSS file to achieve this effect.
-Make sure that the CSS rules for the ordered list also specify the same margins
-and padding as was done for the \program{<blockquote>}. You also need to ensure
-that your site correctly uses the \program{<footer>} tag to create a footer
-following the example from a previous assignment. Remember, your footer should
-have a border on the bottom and right, as seen in the screenshot. Please talk
-to the instructor or a teaching assistant if you have any questions.
 
 Now, you can run your web server by typing the command \command{serve src/www
 4250}. At this point, you can start your web browser and go to the site
