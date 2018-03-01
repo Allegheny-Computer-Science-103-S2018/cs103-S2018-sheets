@@ -265,39 +265,41 @@ line of HTML source code?
   \vspace*{-.25in}
 \end{figure}
 
-At this point, you are ready to add, in the \program{<body>} region of the
-\mainprogram{} file, the code needed to display the provided image that is in
-the \program{img/} directory. Can you find the source code location where this
-file name and directory must be included? Using the textbook's content in Figure
-3.16 and Table 3.1, can you write the correct source code that includes the
-image? Now, you are ready to add the five reviews of the photograph.
-Figure~\ref{fig:code} gives an example of the HTML source code that will create
-the first review. You should include a customized version of this source code in
-your own web site, changing the name, time, and emoji to appropriate values. To
-learn more about each emoji that is available for inclusion in your web site,
-please visit \url{https://afeld.github.io/emoji-css/}. Ultimately, your web site
-should contain at least five photograph reviews that follow the format given in
-Figure~\ref{fig:code}. Finally, students should check the correctness of their
+% At this point, you are ready to add, in the \program{<body>} region of the
+% \mainprogram{} file, the code needed to display the provided image that is in
+% the \program{img/} directory. Can you find the source code location where this
+% file name and directory must be included? Using the textbook's content in Figure
+% 3.16 and Table 3.1, can you write the correct source code that includes the
+% image? Now, you are ready to add the five reviews of the photograph.
+% Figure~\ref{fig:code} gives an example of the HTML source code that will create
+% the first review. You should include a customized version of this source code in
+% your own web site, changing the name, time, and emoji to appropriate values. To
+% learn more about each emoji that is available for inclusion in your web site,
+% please visit \url{https://afeld.github.io/emoji-css/}. Ultimately, your web site
+% should contain at least five photograph reviews that follow the format given in
+% Figure~\ref{fig:code}.
+
+Finally, students should check the correctness of their
 HTML by running the command \command{htmlhint src/www/index.html} in their
 terminal window. If the web site displays incorrectly, please discuss the
 problems with a teaching assistant or the course instructor.
 
-As you can see from the screenshot provided in your GitHub repository, your site
-should have a section with links to external sites that provide travel tips.
-Specifically, your site should include links to the web sites mentioned in the
-following list. If you look at the provided screenshot you can see a suggestion
-for the content that you can include in these links. Also, using the technique
-that you learned in a previous assignment, these links should always open in a
-new browser tab. Finally, your CSS file needs to specify that the ordered list
-has a 1pt border on the top and left. Remember, you can refer to the source code
-sample in Figure~\ref{fig:css} and Figures 4.18 and 4.20 to learn more about how
-to correctly modify the CSS file to achieve this effect. Make sure that the CSS
-rules for the ordered list also specify the same margins and padding as was done
-for the \program{<blockquote>}. You also need to ensure that your site correctly
-uses the \program{<footer>} tag to create a footer following the example in
-Figure~\ref{fig:footer}. Remember, your footer should have a border on the
-bottom and right, as seen in the screenshot. Please talk to the instructor or a
-teaching assistant if you have any questions.
+As you can see from the screenshot provided in your GitHub repository, your
+site should have a section with links to external sites that provide travel
+tips. Specifically, your site should include links to the web sites mentioned
+in the following list. If you look at the provided screenshot you can see a
+suggestion for the content that you can include in these links. Also, using the
+technique that you learned in a previous assignment, these links should always
+open in a new browser tab. Finally, your CSS file needs to specify that the
+ordered list has a 1pt border on the top and left. Remember, you can refer to
+the source code sample in Figure~\ref{fig:css} and Figures 4.18 and 4.20 to
+learn more about how to correctly modify the CSS file to achieve this effect.
+Make sure that the CSS rules for the ordered list also specify the same margins
+and padding as was done for the \program{<blockquote>}. You also need to ensure
+that your site correctly uses the \program{<footer>} tag to create a footer
+following the example from a previous assignment. Remember, your footer should
+have a border on the bottom and right, as seen in the screenshot. Please talk
+to the instructor or a teaching assistant if you have any questions.
 
 Now, you can run your web server by typing the command \command{serve src/www
 4250}. At this point, you can start your web browser and go to the site
