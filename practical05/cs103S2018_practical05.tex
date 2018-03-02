@@ -215,59 +215,56 @@ you see? What do you think is their purpose? Please ask questions if you have an
   \centering
 
   \begin{verbatim}
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/emoji.css" rel="stylesheet">
 
-  ## Web Development Roles and Skills
+    tr:nth-child(even) td { background: #F1F1F1; }
+    tr:nth-child(odd) td { background: #FEFEFE; }
+    tr td:hover { background: #777; color: #FFF; }
 
-  * Front-end developer
-  * Hardware architect
-  * Product designer
-
-  ```
-  pandoc src/www/html/answers.md \
-        --output=src/www/html/answers.html \
-        --to=html5 \
-        --css=src/www/css/github.css \
-        --self-contained \
-        --smart
-  ```
-
-  ![The Labocat](https://octodex.github.com/images/labtocat.png "The Labocat")
-
+    table {
+      color: #333;
+      width: 600px;
+      border: solid #777;
+      border-width: 1pt 0pt 0pt 1pt;
+      border-spacing: 0;
+      margin: 30px;
+      padding: 5px 5px 5px 5px;
+    }
   \end{verbatim}
 
   \vspace*{-3em}
 
-  \caption{Some of the Segments of the Correct Markdown Source Code.}~\label{fig:correct}
+  \caption{Some of the Segments of the Correct HTML and Source Code.}~\label{fig:correct}
 
   \vspace*{-2em}
 
 \end{figure}
 
-\section*{Repairing Markdown Mistakes in a Web Site}
+\section*{Repairing Mistakes in the HTML and CSS for a Web Site}
 
 This practical assignment invites you to repair a web site that contains
-incorrect Markdown source code. You should use the \command{mdl
-src/www/answers.md} command and the GatorGrader tool to identify and fix all of
-the mistakes in the provided Markdown file. Figure~\ref{fig:correct} gives some
-examples of how the correct source code should look in your \mainprogramsource{}
-file. Please remember that a ``linting'' tool is unlikely to point out all of
-the problems in the source code --- you will need to study the provided source
-code and your Markdown handout and carefully determine the root cause of each
-defect. Now, you are ready to practice using a tool that converts your Markdown
-file into HTML and run a web server to make your web site available in a
-browser. To convert your Markdown, make sure that you are in the ``home
-directory'' of your GitHub repository and type \command{pandoc
-src/www/answers.md -o src/www/answers.html}. You can now run your web server by
-typing the command \command{serve src/www 4250}. At this point, you can start
-your web browser and go to the web site
-\url{http://localhost:4250/answers.html}. Does your new web site look correct?
-Can you see the image? If not, then continue to edit and convert it until the
-files are correct. Since this is our second practical assignment and you are
-still learning how to use the appropriate hardware and software, don't become
-frustrated if you make a mistake. Instead, use your mistakes as an opportunity
-for learning both about the necessary web development technology and the
-background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+incorrect HTML and CSS source code. You should use the \command{ htmlhint
+src/www/index.html} command and the GatorGrader tool to identify and fix all of
+the mistakes in the provided source code files. Figure~\ref{fig:correct} gives
+some examples of how the correct source code should look in the provided files.
+Please remember that a ``linting'' tool is unlikely to point out all of the
+problems in the source code --- you will need to study the provided source code
+and your textbook to carefully determine the root cause of each defect.
+
+Now, you are ready to practice running a web server to make your web site
+available in a browser. You can now run your web server by typing the command
+\command{serve src/www 4250}. At this point, you can start your web browser and
+go to the web site \url{http://localhost:4250/}. Does your new web site look
+correct? Can you see the required table? Are all of the styles and fonts
+correctly applied? If not, then continue to edit and convert it until the files
+are correct. Since this is a challenging practical assignment and you are still
+learning how to debug complex HTML and CSS files, don't become frustrated if you
+make a mistake. Instead, use your mistakes as an opportunity for learning both
+about the necessary web development technology and the background and expertise
+of the other students in the class, the teaching assistants, and the course
+instructor.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
@@ -282,31 +279,41 @@ of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 practical assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
-check to ensure that \mainprogram{} has the required number of subsections
-created with the \command{##} code.
+check to ensure that \mainprogram{} creates a styled table with three columns, a
+header, and four rows.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your static web site displays correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that transferring your code or writing to GitHub did not work correctly, then please read
-the messages in your terminal and try to determine why, asking a teaching assistant or the course instructor for
-assistance, if necessary.
+To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal window. Once this step completes you can type
+\gatorgradercheck{}. If your work does not meet all of the assignment's
+requirements, then you will see the following output in your terminal:
+\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
+mistakes in your assignment, then you will need to review GatorGrader's output,
+find the mistake, and try to fix it. Once your static web site displays
+correctly, fulfilling at least some of the assignment's requirements, you should
+transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands.
+For example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and
+checking to see that the transfer to GitHub is successful. If you notice that
+transferring your code or writing to GitHub did not work correctly, then please
+read the messages in your terminal and try to determine why, asking a teaching
+assistant or the course instructor for assistance, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this practical assignment.
 
 \section*{Summary of the Required Deliverables}
@@ -318,8 +325,13 @@ Instead, this assignment invites you to submit, using GitHub, the following deli
 
 \setlength{\itemsep}{0in}
 
-\item A properly formatted and correct version of \mainprogramsource{} that both meets all of the established
-  requirements and produces the correct HTML and the desired static web site.
+\item A properly formatted and correct version of \mainprogramsource{} that both
+  meets all of the established requirements and produces the correct HTML and
+  the desired static web site.
+
+\item A properly formatted and correct version of all of the CSS files (e.g.,
+  \program{site.css} and \program{table.css}) that correctly style the HTML tags
+  and produce a web site meeting the requirements.
 
 \end{enumerate}
 
