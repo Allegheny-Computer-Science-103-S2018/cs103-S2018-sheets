@@ -251,7 +251,9 @@ the mistakes in the provided source code files. Figure~\ref{fig:correct} gives
 some examples of how the correct source code should look in the provided files.
 Please remember that a ``linting'' tool is unlikely to point out all of the
 problems in the source code --- you will need to study the provided source code
-and your textbook to carefully determine the root cause of each defect.
+and your textbook to carefully determine the root cause of each defect. For
+example, you should check that the HTML tags match and the CSS rules are
+correct.
 
 Now, you are ready to practice running a web server to make your web site
 available in a browser. You can now run your web server by typing the command
@@ -271,16 +273,15 @@ instructor.
 The Markdown file that contains your reflection must adhere to the standards
 described in the Markdown Syntax Guide
 \url{https://guides.github.com/features/mastering-markdown/}. Finally, your
-\mainprogram{} file should adhere to the Markdown standards established by the
-\step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards
-set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
-of requiring you to manually check that your deliverables adhere to these
+\mainprogram{} file should adhere to the HTML standards established by the
+\step{HTML linting} tool available at \url{http://htmlhint.com/}. Instead of
+requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 practical assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
 check to ensure that \mainprogram{} creates a styled table with three columns, a
-header, and four rows.
+header, four rows, and an alternating background. With that said, remember that
+these tools may not support the detection of all of the ten seeded defects!
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
