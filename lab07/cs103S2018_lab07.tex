@@ -251,22 +251,21 @@ in the \program{<head>} region of the HTML source code?
 \begin{figure}[t]
   \centering
   \begin{verbatim}
-  table {
-    color: #333;
-    width: 600px;
-    border: solid #777;
-    border-width: 1pt 0pt 0pt 1pt;
-    border-spacing: 0;
-    margin: 30px;
-    padding: 5px 5px 5px 5px;
-  }
+    <!-- Follow instructions at https://formspree.io/ to start your form -->
+    <form action="https://formspree.io/gkapfham@allegheny.edu" method="POST">
 
-  th {
-    font-weight: bold;
-  }
+      <!-- Specify the server location to avoid page reload problems -->
+      <input type="hidden" name="_next" value="http://localhost:4250/"/>
+
+      <!-- Create fields for your name and email -->
+      <label>Name</label> <input type="text" name="name"> <br>
+      <label>Email</label> <input type="email" name="_replyto"> <br> <br>
+
+      <!-- Follow instructions to create the rest of the form -->
+    </form>
   \end{verbatim}
   \vspace*{-.35in}
-  \caption{The CSS Source Code for Styling the Table and the Table Header.}~\label{fig:css}
+  \caption{The HTML Source Code for Create the Form that Interacts with Formspee.}~\label{fig:css}
   \vspace*{-.25in}
 \end{figure}
 
