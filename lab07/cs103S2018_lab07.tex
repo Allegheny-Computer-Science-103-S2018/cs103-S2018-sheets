@@ -110,7 +110,7 @@ To learn how to write HTML and CSS files that include headers, content, tags,
 style rules, and a form, specifically implementing a ``travel survey'' web site
 leveraging the example in Figure 3.9 of the textbook. As in previous
 assignments, you will create your travel web site with features such as the use
-of a \program{<table>} tag and an emoji for each photograph review, additionally
+of a \program{<table>} tag and emoji loaded from a CSS library, additionally
 applying a style that adopts Google Web Fonts, customized font sizes, and
 borders for a \program{<footer>}. As in a previous assignment, you will add an
 HTML table that is styled by additional CSS rules. Specifically, your HTML table
@@ -185,7 +185,7 @@ on GitHub''; each of them will help you to understand how to use GitHub. To do
 well on this assignment, you should also review Chapters 1 and 5 in the course
 textbook, paying particularly close attention to Sections 5.3 through 5.5 and
 Figures 5.18, 5.19, and 5.20. Please see the course instructor or a teaching
-assistant if you have questions these reading assignments.
+assistant if you have questions about these reading assignments.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
@@ -207,15 +207,15 @@ automatically receive a failing grade for it.
 Before you move to the next step of this assignment, please make sure that you
 read all of the content on the web site for your new GitHub repository, paying
 close attention to the technical details about the commands that you will type
-and the output that your program must produce. Now you are ready to download the
-starting materials to your laboratory computer. Click the ``Clone or download''
-button and, after ensuring that you have selected ``Clone with SSH'', please
-copy this command to your clipboard. To enter into your course directory you
-should now type \command{cd cs103S2018}. Now, by typing \command{git clone} in
-your terminal and then pasting in the string that you copied from the GitHub
-site you will download all of the code for this assignment. For instance, if the
-course instructor ran the \command{git clone} command in the terminal, it would
-look like:
+and the content that must be evident in your web site. Now you are ready to
+download the starting materials to your laboratory computer. Click the ``Clone
+or download'' button and, after ensuring that you have selected ``Clone with
+SSH'', please copy this command to your clipboard. To enter into your course
+directory you should now type \command{cd cs103S2018}. Now, by typing
+\command{git clone} in your terminal and then pasting in the string that you
+copied from the GitHub site you will download all of the code for this
+assignment. For instance, if the course instructor ran the \command{git clone}
+command in the terminal, it would look like:
 
 \begin{lstlisting}
   git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-7-gkapfham.git
@@ -235,11 +235,11 @@ these files, sharing your discoveries with a \mbox{teaching assistant}.
 This laboratory assignment invites you to implement a web site using the HTML
 and CSS programming languages, building on the work that you completed during
 previous assignments. In particular, you will create an extended version of the
-travel photographs web site that looks like the one in Figure 3.9. However, now
+travel photographs web site that partially looks like the one in Figure 3.9. Now
 you will include an HTML form that administers a survey about international
 travel. Please refer to your GitHub repository for a screenshot that shows what
-your final web site should look like when completed. Specifically, please note
-that this assignment asks you to complete a web site that contains an HTML table
+your final site should look like when completed. Additionally, please note that
+this assignment still asks you to complete a site that contains an HTML table
 that you style with CSS. Overall, you will need to read and resolve all of the
 \command{TODO} markers in the provided HTML and CSS files. To start, you should
 include the cascading style sheet (CSS) that controls, for instance, the font
@@ -263,7 +263,7 @@ in the \program{<head>} region of the HTML source code?
       <label>Name</label> <input type="text" name="name"> <br>
       <label>Email</label> <input type="email" name="_replyto"> <br> <br>
 
-      <!-- Follow instructions to create the rest of the form -->
+      <!-- Follow the instructions to create the rest of the form -->
     </form>
   \end{verbatim}
   \vspace*{-.35in}
@@ -289,15 +289,15 @@ Figure~\ref{fig:form} provide some samples of the HTML source code that you will
 need to include in your form. For instance, the first line of code declares the
 form and connects it to the Formspree service. After you authorize the use of
 this service, it will enable you to receive an email each time someone submits
-your form. The second line of source code will ensure that the Formspree system
-will ``redirect'' back to your web site after the form is submitted to
-Formspree. Additionally, you will see that Figure~\ref{fig:form} provides you
-with the source code to display both the labels for the person's name and email
-address and then the affiliated input fields. You can learn about all of the
-other required form control elements by studying the \command{TODO} markers and
+your form. The second line of source code ensures that the Formspree system will
+``redirect'' back to your web site after the form is submitted to Formspree.
+Additionally, you will see that Figure~\ref{fig:form} provides you with the
+source code to display both the labels for the person's name and email address
+and then the affiliated input fields. You can learn about all of the other
+required form control elements by studying the \command{TODO} markers and
 reading the textbook's description of Figures 5.18., 5.19, and 5.21. Make sure
 that the form submits correctly and that it includes \program{<br>} tags to
-ensure proper formatting. Please see the instructor with any questions about
+enable proper formatting. Please see the instructor with any questions about
 these tasks.
 
 % Finally, students should remember to check the correctness of their HTML by
@@ -317,7 +317,7 @@ server is returning the \program{site.css} and \program{table.css} files that
 contain the styles for your HTML. Finally, when you are interacting with your
 web site you should verify that certain links open in a new browser tab, the
 table's cells change color when you hover over them, and the form contains all
-of the required components for the interactive survey the reports by email.
+of the required components for the interactive survey that reports by email.
 
 % Please see the instructor if you have questions about the CSS or HTML code.
 
@@ -333,9 +333,9 @@ share your experiences with another class member and the instructor and at least
 one the teaching assistants! Finally, please take the time to answer the other
 questions in the \reflection{} file. For instance, make sure that you understand
 and can explain how the HTML and CSS files work together to format the text and
-enable the display of an emoji in the reviews below the photograph. You should
-also be able to explain how you used \program{<br>} and \program{<label>} tags
-to correctly format and display the survey content in the form.
+enable the display of emoji footer at the bottom of the site. You should also be
+able to explain how you used \program{<br>} and \program{<label>} tags to
+correctly format and display the survey content in the web site's form.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
 
@@ -350,8 +350,8 @@ of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 laboratory assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
-check to ensure that \mainprogram{} has the required sections and photograph
-reviews.
+check to ensure that \mainprogram{} has the required sections and an
+interactive survey.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
