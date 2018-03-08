@@ -169,8 +169,9 @@ and using an automated tool to assess your completion of a project.
   effectively communicate and collaborate with their team members and the tutors, teaching assistants, and course
   instructor.
 
-\item {\bf Review the Honor Code on the syllabus}. While you may discuss your assignments with others, copying source
-  code or writing is a violation of Allegheny College's Honor Code.
+% \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
+  % assignments with others, copying source code or writing is a violation of
+  % Allegheny College's Honor Code.
 
 \end{itemize}
 
@@ -198,7 +199,7 @@ to access your new GitHub repository for this assignment, please click the green
 ``Accept'' button and then click the link that is prefaced with the label ``Your
 assignment has been created here''. If you accepted the assignment and correctly
 followed these steps, you should have created a repository with a name like
-``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-6-gkapfham''.
+``Allegheny-Computer-Science-103-Spring-2018/computer-science-103-spring-2018-lab-7-gkapfham''.
 Unless you provide the course instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
@@ -217,7 +218,7 @@ course instructor ran the \command{git clone} command in the terminal, it would
 look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-6-gkapfham.git
+  git clone git@github.com:Allegheny-Computer-Science-103-S2018/computer-science-103-spring-2018-lab-7-gkapfham.git
 \end{lstlisting}
 
 After this command finishes, you can use \command{cd} to change into the new
@@ -229,19 +230,20 @@ What do you think is their purpose? Please note that this assignment includes
 both an HTML and a CSS file with starting content. Spend some time exploring
 these files, sharing your discoveries with a \mbox{teaching assistant}.
 
-\section*{Displaying Tabular Data with HTML and Customized CSS}
+\section*{Creating an Interactive Survey with an HTML Form}
 
 This laboratory assignment invites you to implement a web site using the HTML
 and CSS programming languages, building on the work that you completed during
 previous assignments. In particular, you will create an extended version of the
-travel photographs web site that looks like the one in Figure 3.9. Please refer
-to your GitHub repository for a screenshot that shows what your final web site
-should look like when completed. Specifically, please note that this assignment
-asks you to complete a web site that contains an HTML table that you style with
-CSS. Overall, you will need to read and resolve all of the \command{TODO}
-markers in the provided HTML and CSS files. To start, you should include the
-cascading style sheet (CSS) that controls, for instance, the font sizes on the
-site. You can achieve this step by adding the code \program{<link
+travel photographs web site that looks like the one in Figure 3.9. However, now
+you will include an HTML form that administers a survey about international
+travel. Please refer to your GitHub repository for a screenshot that shows what
+your final web site should look like when completed. Specifically, please note
+that this assignment asks you to complete a web site that contains an HTML table
+that you style with CSS. Overall, you will need to read and resolve all of the
+\command{TODO} markers in the provided HTML and CSS files. To start, you should
+include the cascading style sheet (CSS) that controls, for instance, the font
+sizes on the site. You can achieve this step by adding the code \program{<link
 href="css/site.css" rel="stylesheet">} to the \program{<head>} region of the
 \mainprogramsource{} file. Note that you also need to have another line of
 source code to load the \program{emoji.css} and \program{table.css} files and
@@ -273,26 +275,30 @@ As you can see from the screenshot provided in your GitHub repository, your site
 should have content like you added in a previous assignment. You can include
 source code from another GitHub repository to ensure that your web site has all
 of these features. For instance, you will need to use and style the
-\program{<blockquote>} and \program{<footer>} tags in your web site's source
-code. Remember, your footer should have a border on the bottom and right, as
-seen in the screenshot. Please talk to the instructor or a teaching assistant if
-you have any questions. Now, you are ready to add in the new features that are
-unique to this assignment. First, you should add the \program{<table>} tag and
-all of the header, row, and cell markup tags so that you can produce a table
-that looks like the one in the screenshot. To learn more about these tags you
-can review Section 5.1's content in the textbook.
+\program{<footer>} tag in your web site's source code. Remember, your footer
+should have a border on the bottom and right, as seen in the screenshot. Also,
+you should add the \program{<table>} tag and all of the header, row, and cell
+markup tags so that you can produce a table that looks like the one in the
+screenshot. To learn more about these tags you can review Section 5.1's content
+in the textbook. Please talk to the instructor or a teaching assistant if you
+have any questions. Now, you are ready to add in the new features that are
+unique to this assignment. Specifically, you need to learn how to use the form
+reporting tool available from \url{https://formspree.io/}.
 
-Once you have added the table and verified that the contents are correct, you
-are ready to modify the CSS rules in the \secondprogram{} file. First, you need
-to style the \program{<table>} tag and table headers by using the source code
-provided in Figure~\ref{fig:form}. Now, you should add more CSS code that will
-ensure that all of the cells in the table display their textual content in a
-centered fashion. You should also review the textbook's content in Section 5.2.2
-to learn how to style the table's rows so that they exhibit a ``zebra effect''.
-Then, you should style the table's cells so that they have a dark grey
-background and white text when a mouse hovers over them. To accomplish these
-tasks you will need to search online and read the textbook to learn more about
-\program{nth-child} and \program{td:hover}.
+Figure~\ref{fig:form} provide some samples of the HTML source code that you will
+need to include in your form. For instance, the first line of code declares the
+form and connects it to the Formspree service. After you authorize the use of
+this service, it will enable you to receive an email each time someone submits
+your form. The second line of source code will ensure that the Formspree system
+will ``redirect'' back to your web site after the form is submitted to
+Formspree. Additionally, you will see that Figure~\ref{fig:form} provides you
+with the source code to display both the labels for the person's name and email
+address and then the affiliated input fields. You can learn about all of the
+other required form control elements by studying the \command{TODO} markers and
+reading the textbook's description of Figures 5.18., 5.19, and 5.21. Make sure
+that the form submits correctly and that it includes \program{<br>} tags to
+ensure proper formatting. Please see the instructor with any questions about
+these tasks.
 
 % Finally, students should remember to check the correctness of their HTML by
 % running the command \command{htmlhint src/www/index.html} in their terminal
