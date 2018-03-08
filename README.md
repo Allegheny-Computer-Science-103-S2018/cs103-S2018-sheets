@@ -1,12 +1,12 @@
-# cs111-F2017-lab-sheets
+# cs103-S2018-lab-sheets
 
 This repository contains all of the laboratory assignment sheets for Computer
-Science 111 Fall 2017. Each directory in this repository contains the LaTeX
+Science 103 Spring 2018. Each directory in this repository contains the LaTeX
 source code for a laboratory assignment designed for use with [GitHub
 Classroom](https://classroom.github.com/). To learn more about the course in
-which these assignments were completed, please visit the [Computer Science 111
-Fall 2017 GitHub
-Organization](https://github.com/Allegheny-Computer-Science-111-F2017). All of
+which these assignments were completed, please visit the [Computer Science 103
+Spring 2018 GitHub
+Organization](https://github.com/Allegheny-Computer-Science-103-S2018). All of
 the LaTeX files in this repository are automatically compiled with [Travis
 CI](https://travis-ci.org/), thus ensuring that they compile correctly and,
 moreover, that a PDF of each assignment is available in the GitHub repository
@@ -18,16 +18,10 @@ Since this repository primarily contains LaTeX source code, the Travis CI
 configuration for it will compile the source code and automatically release a
 PDF of the source code whenever the last commit is associated with a [Git
 Tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging). As such, this will
-cause a PDF file to become available in the listing of
-the [Releases](https://github.com/Allegheny-Computer-Science-111-F2017/cs111-F2017-labs/releases)
+cause a PDF file to become available in the listing of the
+[Releases](https://github.com/Allegheny-Computer-Science-103-S2018/cs103-S2018-sheets/releases)
 for this repository. All release numbers in this repository adhere to the
 [Semantic Versioning](http://semver.org/) standard.
-
-## Acknowledgements
-
-We gratefully acknowledge Cassandra Colon for finding and explaining how to fix
-a mistake in the commands for running the GatorGrader program. Also, we thank
-Ness T. for finding a mistake in a directory specification in an assignment.
 
 ## Problems or Praise
 
