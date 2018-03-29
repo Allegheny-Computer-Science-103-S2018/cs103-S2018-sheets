@@ -142,7 +142,7 @@ of a web site.
   the course instructor.
 
 \item {\bf Store your files in GitHub}. Starting with this laboratory assignment, you will be responsible for storing
-  all of your files (e.g., JavaScript code and Markdown-based writing) in a Git repository using GitHub Classroom.
+  all of your files (e.g., HTML and CSS code and Markdown-based writing) in a Git repository using GitHub Classroom.
   Please verify that you have saved your source code in your Git repository by using \command{git status} to ensure that
   everything is updated. You can see if your assignment submission meets the established correctness requirements by
   using the provided checking tools on your local computer and in checking the commits in GitHub.
@@ -224,11 +224,12 @@ After this command finishes, you can use \command{cd} to change into the new
 directory. If you want to \step{go back} one directory from your current
 location, then you can type the command \command{cd ..}. Please continue to use
 the \command{cd} and \command{ls} commands to explore the files that you
-automatically downloaded from GitHub. What files and directories do you see?
-What do you think is their purpose? Please note that this laboratory assignment
-does not include any HTML, CSS, or media files. This is due to the fact that a
-key learning objective for this project is to ensure that you can successfully
-create your own bespoke web site using existing HTML and CSS source code.
+automatically downloaded from GitHub. What files and directories do (or, don't)
+you see? What do you think is their purpose? Please note that this laboratory
+assignment does not include any HTML, CSS, or media files. This is due to the
+fact that a key learning objective for this project is to ensure that you can
+successfully create your own bespoke web site using existing HTML and CSS source
+code.
 
 \section*{Creating and Testing an Image Gallery}
 
@@ -424,8 +425,8 @@ src/www/index.html} in their terminal window. If the image gallery in your web
 site is incorrect, then please discuss the problems in your HTML or CSS with a
 teaching assistant or the instructor.
 
-Now, you can run your web server by typing the command \command{serve src/www
-4250}. At this point, you can start your web browser and go to the site
+Remember, you can run your web server by typing the command \command{serve
+src/www 4250}. At this point, you can start your web browser and go to the site
 \url{http://localhost:4250/}. Please check to see if your new web site looks
 correct. If it is not, then continue to edit and check it until the files are
 correct. You should also ensure that, when you run the web server, it produces
@@ -468,8 +469,9 @@ of requiring you to manually check that your deliverables adhere to these
 industry-accepted standards, the GatorGrader tool that you will use in this
 laboratory assignment makes it easy for you to automatically check if your
 submission meets the standards for correctness. For instance, GatorGrader will
-check to ensure that \mainprogram{} has the required sections and an
-interactive survey.
+check to ensure that certain files and directories exist in your repository.
+Since this assignment asks you to independently create your source code,
+GatorGrader does not check for specific code.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
@@ -509,7 +511,8 @@ towards your grade for this laboratory assignment.
 \noindent Students do not need to submit printed source code or technical
 writing for any assignment in this course. Instead, this assignment invites you
 to submit, using GitHub, the following deliverables. Overall, your submitted web
-site should match the screenshot provided in your GitHub repository.
+site's image gallery should match the wireframe provided in
+Figure~\ref{fig:wireframe}.
 
 \vspace*{-.1in}
 
