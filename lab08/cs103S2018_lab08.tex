@@ -243,7 +243,7 @@ create your own bespoke web site using existing HTML and CSS source code.
       \centering
       \vspace*{.1in}
       Small Image Called $I_1$ \\
-      Resized with \program{convert} \\
+      Downloaded from Flickr \\
       Display Resolution \\
       Display Image Size
       \vspace*{.1in}
@@ -277,7 +277,7 @@ create your own bespoke web site using existing HTML and CSS source code.
       \centering
       \vspace*{.1in}
       Small Image Called $I_1$ \\
-      Resized with HTML or CSS \\
+      Downloaded from Flickr \\
       Display Resolution \\
       Display Image Size
       \vspace*{.1in}
@@ -313,7 +313,7 @@ create your own bespoke web site using existing HTML and CSS source code.
       \centering
       \vspace*{.1in}
       Small Image Called $I_2$ \\
-      Resized with \program{convert} \\
+      Downloaded from Flickr \\
       Display Resolution \\
       Display Image Size
       \vspace*{.1in}
@@ -347,7 +347,7 @@ create your own bespoke web site using existing HTML and CSS source code.
       \centering
       \vspace*{.1in}
       Small Image Called $I_2$ \\
-      Resized with HTML or CSS \\
+      Downloaded from Flickr \\
       Display Resolution \\
       Display Image Size
       \vspace*{.1in}
@@ -378,18 +378,35 @@ create your own bespoke web site using existing HTML and CSS source code.
     orientation while $I_2$ is an image with ``landscape'' orientation. The
     second textual row in each box explains how you should resize the image
     while the third row indicates that the image gallery should furnish the
-    image resolution in terms of a height and width. Similarly, the fourth row
+    image ``resolution'' as a height and a width. Similarly, the fourth row
     means that the gallery should give the size of the image in kilobytes
   (KB).}~\label{fig:wireframe}
 
   \vspace*{-.25in}
+
 \end{figure}
 
 Figure~\ref{fig:wireframe} provides a ``wireframe'' (i.e., a conceptual
 representation) of the image gallery that you are invited to implement and test
 for this laboratory assignment. Since certain aspects of your image gallery are
 similar to a project in the textbook, you should also review Figure 6.40 to
-learn more about the requirements for your web site.
+learn more about the requirements for your web site. First, you should identify
+a small image, denoted $I_1$, that has a ``small'' resolution and is in a
+``portrait'' orientation. To create the first row in the image gallery, you
+should now use the \program{convert} program to resize $I_1$ so that it is
+double and triple its original size. Remember, to learn more about this program,
+you can type the command \program{man convert} in your terminal window and read
+this ``manual page'' to learn the command-line arguments.
+
+As indicated in Figure~\ref{fig:wireframe} and its caption, each image should be
+annotated with text that gives its ``resolution'' (i.e., the height and width of
+the image) and its file size in kilobytes. To discover an image's size in
+kilobytes, you can type the command \program{ls -l} in the terminal window and
+then provide the name of your image file as an argument. You should also repeat
+all of these steps for image $I_2$ that has a ``landscape'' oriented. Finally,
+to organize your images into a grid, you can use HTML tables, as you implemented
+previously. Alternatively, students who want an extra challenge can use HTML and
+CSS source code to create a responsive layout for their grid of images.
 
 
 Finally, students should remember to check the correctness of their HTML by
@@ -520,16 +537,16 @@ repository and the overall quality of your partially completed work. Please see
 the instructor if you have questions about the evaluation of this laboratory
 assignment.
 
-\section*{Adhering to the Honor Code}
+% \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this assignment on an
-individual basis. While it is appropriate for students in this class to have
-high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem
-with others and the student who produces assignments that are identical to, or
-merely variations on, someone else's work. Deliverables (e.g., HTML source code
-or Markdown-based technical writing) that are nearly identical to the work of
-others will be taken as evidence of violating the \mbox{Honor Code}. Please see
-the course instructor if you have questions about this policy.
+% In adherence to the Honor Code, students should complete this assignment on an
+% individual basis. While it is appropriate for students in this class to have
+% high-level conversations about the assignment, it is necessary to distinguish
+% carefully between the student who discusses the principles underlying a problem
+% with others and the student who produces assignments that are identical to, or
+% merely variations on, someone else's work. Deliverables (e.g., HTML source code
+% or Markdown-based technical writing) that are nearly identical to the work of
+% others will be taken as evidence of violating the \mbox{Honor Code}. Please see
+% the course instructor if you have questions about this policy.
 
 \end{document}
