@@ -167,7 +167,7 @@ debugging of a web site.
   effectively communicate and collaborate with their team members and the tutors, teaching assistants, and course
   instructor.
 
-% \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
+  % \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
   % assignments with others, copying source code or writing is a violation of
   % Allegheny College's Honor Code.
 
@@ -228,44 +228,49 @@ What do you think is their purpose? Please note that this assignment includes
 both an HTML and a CSS file with starting content. Spend some time exploring
 these files, sharing your discoveries with a \mbox{teaching assistant}.
 
-\section*{Creating an Interactive Survey with an HTML Form}
+\section*{Creating and Testing an Image Gallery}
 
-This laboratory assignment invites you to implement a web site using the HTML
-and CSS programming languages, building on the work that you completed during
-previous assignments. In particular, you will create an extended version of the
-travel photographs web site that partially looks like the one in Figure 3.9. Now
-you will include an HTML form that administers a survey about international
-travel. Please refer to your GitHub repository for a screenshot that shows what
-your final site should look like when completed. Additionally, please note that
-this assignment still asks you to complete a site that contains an HTML table
-that you style with CSS. Overall, you will need to read and resolve all of the
-\command{TODO} markers in the provided HTML and CSS files. To start, you should
-include the cascading style sheet (CSS) that controls, for instance, the font
-sizes on the site. You can achieve this step by adding the code \program{<link
-href="css/site.css" rel="stylesheet">} to the \program{<head>} region of the
-\mainprogramsource{} file. Note that you also need to have another line of
-source code to load the \program{emoji.css} and \program{table.css} files and
-their features for further styling the web site. How would you write these lines
-in the \program{<head>} region of the HTML source code?
 
 \begin{figure}[t]
   \centering
-  \begin{verbatim}
-    <!-- Follow instructions at https://formspree.io/ to start your form -->
-    <form action="https://formspree.io/gkapfham@allegheny.edu" method="POST">
 
-      <!-- Specify the server location to avoid page reload problems -->
-      <input type="hidden" name="_next" value="http://localhost:4250/"/>
+  \begin{tabular}{|c|c|c|}
+    \hline
 
-      <!-- Create fields for your name and email -->
-      <label>Name</label> <input type="text" name="name"> <br>
-      <label>Email</label> <input type="email" name="_replyto"> <br> <br>
+    \begin{minipage}{1.5in}
+      \centering
+      \vspace*{.1in}
+      Small Image \\
+      Resized with \program{convert} \\
+      Display Resolution \\
+      Display Image Size
+      \vspace*{.1in}
+    \end{minipage} &
 
-      <!-- Follow the instructions to create the rest of the form -->
-    </form>
-  \end{verbatim}
-  \vspace*{-.35in}
-  \caption{The HTML Source Code for Create the Form that Interacts with Formspee.}~\label{fig:form}
+    \begin{minipage}{1.5in}
+      \centering
+      \vspace*{.1in}
+      Size-Doubled Image \\
+      Resized with \program{convert} \\
+      Display Resolution \\
+      Display Image Size
+      \vspace*{.1in}
+    \end{minipage} &
+
+    \begin{minipage}{1.5in}
+      \centering
+      \vspace*{.1in}
+      Size-Tripled Image \\
+      Resized with \program{convert} \\
+      Display Resolution \\
+      Display Image Size
+      \vspace*{.1in}
+    \end{minipage} \\
+
+    \hline
+  \end{tabular}
+
+  \caption{A Conceptual Representation of the Image Gallery.}~\label{fig:form}
   \vspace*{-.25in}
 \end{figure}
 
