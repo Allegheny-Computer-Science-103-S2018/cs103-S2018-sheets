@@ -379,8 +379,8 @@ create your own bespoke web site using existing HTML and CSS source code.
     second textual row in each box explains how you should resize the image
     while the third row indicates that the image gallery should furnish the
     image ``resolution'' as a height and a width. Similarly, the fourth row
-    means that the gallery should give the size of the image in kilobytes
-  (KB).}~\label{fig:wireframe}
+    means that the gallery should give the size of the image in kibibytes
+  (K).}~\label{fig:wireframe}
 
   \vspace*{-.25in}
 
@@ -400,26 +400,29 @@ this ``manual page'' to learn the command-line arguments.
 
 As indicated in Figure~\ref{fig:wireframe} and its caption, each image should be
 annotated with text that gives its ``resolution'' (i.e., the height and width of
-the image) and its file size in kilobytes. To discover an image's size in
-kilobytes, you can type the command \program{ls -lh} in the terminal window and
+the image) and its file size in kibibytes. To discover an image's size in
+kibibytes, you can type the command \program{ls -lh} in the terminal window and
 then provide the name of your image file as an argument. You should also repeat
 all of these steps for image $I_2$ that has a ``landscape'' oriented. Finally,
 to organize your images into a grid, you can use HTML tables, as you implemented
 previously. Alternatively, students who want an extra challenge can use HTML and
 CSS source code to create a responsive layout for their grid of images.
+Ultimately, each student is responsible for using HTML and CSS to implement
+their own approach to arranging the labelled images so that they adhere to the
+grid-based structure in Figure~\ref{fig:wireframe}.
 
-Please notice that the second and fourth rows of the image gallery should
-feature images that are not resized using the \program{convert} program.
-Instead, you should learn how to resize images using HTML and/or CSS source
-code. Critically, you should think about the size in kilobytes of these
-``resized'' images and consider the trade-offs associated with adopting one of
-these two different mechanisms for image resizing. Please don't forget that the
-second and fourth rows should still display, in a textual format, the details
-about the resolution and file size for these images. Finally, students should
-remember to check the correctness of their HTML by running the command
-\command{htmlhint src/www/index.html} in their terminal window. If the image
-gallery in your web site is incorrect, then please discuss the problems in your
-HTML or CSS with a teaching assistant or the instructor.
+Please notice that the second and fourth rows of the image gallery must feature
+images that are not resized using the \program{convert} program. Instead, you
+should learn how to resize images using HTML and/or CSS source code. Critically,
+you should think about the size in kibibytes of these ``resized'' images and
+consider the trade-offs associated with adopting one of these two different
+mechanisms for image resizing. Please don't forget that the second and fourth
+rows should still display, in a textual format, the details about the resolution
+and file size for these images. Finally, students should remember to check the
+correctness of their HTML by running the command \command{htmlhint
+src/www/index.html} in their terminal window. If the image gallery in your web
+site is incorrect, then please discuss the problems in your HTML or CSS with a
+teaching assistant or the instructor.
 
 Now, you can run your web server by typing the command \command{serve src/www
 4250}. At this point, you can start your web browser and go to the site
@@ -430,6 +433,9 @@ output suggesting that it is returning the HTML and CSS files and all of the
 locally stored images (i.e., both $I_1$ and $I_2$ and all of the resized
 versions of these images). If not, then please make sure that you revise your
 HTML and/or CSS source code and/or check the configuration of your web server.
+Critically, students should note that, depending on how they organize their
+files, they may have to create directories in the ``root'' of their web server
+to contain, for instance, the images.
 
 % Please see the instructor if you have questions about the CSS or HTML code.
 
