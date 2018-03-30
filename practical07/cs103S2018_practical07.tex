@@ -24,7 +24,7 @@
 \newcommand{\secondprogramsource}{\lstinline{src/www/css/site.css}}
 
 \newcommand{\screenshot}{\lstinline{screenshot.png}}
-\newcommand{\secondprogramsource}{\lstinline{images/screenshot.png}}
+\newcommand{\screenshotsource}{\lstinline{images/screenshot.png}}
 
 % Commands to describe key development tasks
 
@@ -120,7 +120,7 @@ As a step towards learning more about web media and the advanced styling of a
 web site with a cascading style sheet, you will create a web site featuring
 boxes with CSS gradients and images. Specifically, your web site will feature
 multiple square boxes, each with dark grey borders, that have a CSS gradient as
-their background while also displaying a provide image in a vertically and
+their background while also displaying a provided image in a vertically and
 horizontally centered fashion. Finally, you will continue to practice running a
 web server and using automated tools, like GatorGrader and \program{htmlhint},
 to assess your completion of the assignment.
@@ -189,8 +189,8 @@ Guides'', available at \url{https://guides.github.com/}, that explain how to use
 many of the features that GitHub provides. In particular, make sure that you
 have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects
 on GitHub''; each of them will help you to understand how to use GitHub. To do
-well on this assignment, you should also review Chapters 1 and 6 in the course
-textbook, paying particularly close attention to web media and CSS content
+well on this assignment, you should also review Chapters 1 through 6 in the
+course textbook, paying close attention to the web media and CSS content in
 Sections 6.1 through 6.4 and Figure 6.13. Importantly, for this practical
 assignment the students are responsible for finding and reading all of the
 auxiliary materials that they need to successfully design the requested web
@@ -247,18 +247,38 @@ instructor}.
 %   <img src="img/hotair_balloon.jpg" alt="Hot Air Balloon"/>
 % </div>
 
+% .lineargradientgreen {
+%   background-image: linear-gradient(green, white);
+%   border: solid #777;
+%   border-width: 2pt 2pt 2pt 2pt;
+%   height: 500px;
+%   width: 500px;
+%   display:table-cell;
+%   vertical-align:middle;
+%   text-align:center
+% }
+
 This practical assignment invites you to learn how to create ``image boxes''
-that both have backgrounds created by CSS gradients and contain a horizontally and
-vertically centered image.
+that both have backgrounds created by CSS gradients and contain a horizontally
+and vertically centered image. These 500 pixel by 500 pixel square image boxes
+should have a 2 pt border on each side. Additionally, the first five boxes
+should have one of the backgrounds that correspond to the CSS gradients
+specified in Figure 6.13. Moreover, every box should contain the
+\program{img/hotair_balloon.jpg} in a fashion that is both vertically and
+horizontally centered. Finally, the sixth image box's background should feature
+a CSS gradient that you design to look different than the provided gradients.
+Ultimately, your site will have a total of six stacked squares, each with a CSS
+gradient for a background and an image.
 
 As you complete this practical assignment, you should regularly commit files to
 your GitHub repository, using the ``Git Cheat Sheet'' and the steps that you
 used in previous assignments and that are reviewed in the next section. Also,
 note that your web server will require a dedicated terminal when it is running.
 Students should also remember to check the correctness of their HTML by running
-the command \command{htmlhint src/www/index.html} in their terminal window. If
-the web site displays incorrectly, please discuss the problems with a teaching
-assistant or the instructor.
+the command \command{htmlhint src/www/index.html} in their terminal window.
+
+% If the web site displays incorrectly, please discuss the problems with a
+% teaching assistant or the instructor.
 
 Remember, you can run your web server by typing the command \command{serve
 src/www 4250}. At this point, you can start your browser and go to the site
@@ -279,7 +299,8 @@ industry-accepted standards for web site programming, the GatorGrader tool that
 you will use in this laboratory assignment makes it easy for you to
 automatically check if your submission meets the standards for correctness. For
 instance, GatorGrader will check to ensure that \mainprogram{} has the required
-sections and an interactive survey with the expected number of form elements.
+title and header and the required \program{div} and \program{img} tags for the
+six image boxes.
 
 To get started with the use of GatorGrader, type the command \gatorgraderstart{}
 in your terminal window. Once this step completes you can type
@@ -316,13 +337,15 @@ towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical
-writing for any assignment in this course. Instead, this assignment invites you
-to submit, using GitHub, the following deliverables. Remember, this practical
-assignment does not submitted web site to match a screenshot provided in your
-GitHub repository. Instead, you are responsible for making a site that meets the
-baseline requirements. Please see the course instructor if you have questions
-about this assignment's goals.
+\noindent To ensure that you can successfully create your own web sites that
+feature web media and CSS, this practical provides minimal HTML and CSS source
+code and invites you to add most of the required features. Students do not need
+to submit printed source code or technical writing for any assignment in this
+course. Instead, this assignment invites you to submit, using GitHub, the
+following deliverables. Please see the instructor if you have questions about
+this assignment's goals.
+
+\vspace*{-.05in}
 
 \begin{enumerate}
 
@@ -341,6 +364,8 @@ about this assignment's goals.
   feature to produce this image.
 
 \end{enumerate}
+
+\vspace*{-.1in}
 
 \section*{Evaluation of Your Practical Assignment}
 
@@ -366,8 +391,8 @@ individual basis. While it is appropriate for students in this class to have
 high-level conversations about the assignment, it is necessary to distinguish
 carefully between the student who discusses the principles underlying a problem
 with others and the student who produces assignments that are identical to, or
-merely variations on, someone else's work. Deliverables (e.g., HTML source code
-or Markdown-based technical writing) that are nearly identical to the work of
+merely variations on, someone else's work. Deliverables (e.g., HTML or CSS
+source code or technical writing) that are nearly identical to the work of
 others will be taken as evidence of violating the \mbox{Honor Code}. Please see
 the course instructor if you have questions about this policy.
 
