@@ -20,7 +20,7 @@ script:
 - latexmk -pdf -outdir=_build practical06/cs103S2018_practical06.tex
 - latexmk -pdf -outdir=_build practical07/cs103S2018_practical07.tex
 - latexmk -pdf -outdir=_build quiz01/cs103S2018_studyguide_quiz01.tex
-- latexmk -pdf -outdir=_build quiz01/cs103S2018_studyguide_exam01.tex
+- latexmk -pdf -outdir=_build exam01/cs103S2018_studyguide_exam01.tex
 deploy:
   provider: releases
   api_key:
