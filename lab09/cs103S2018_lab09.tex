@@ -169,9 +169,9 @@ editor to modify HTML source code.
   effectively communicate and collaborate with their team members and the tutors, teaching assistants, and course
   instructor.
 
-  \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
-  assignments with others, copying source code or writing is a violation of
-  Allegheny College's Honor Code.
+  % \item {\bf Review the Honor Code on the syllabus}. While you may discuss your
+  % assignments with others, copying source code or writing is a violation of
+  % Allegheny College's Honor Code.
 
 \end{itemize}
 
@@ -236,34 +236,40 @@ CSS framework to successfully create your own mobile-ready web site with HTML.
 
 \section*{Creating and Testing a Responsively Designed Web Site}
 
+At the start this laboratory assignment, please review the source code in the
+\mainprogramsource{} file, reading its many comments. Next, you should start the
+web site and view this page in your browser. Remember, you can run your web
+server by typing the command \command{serve src/www 4250}. Now, you can start
+your web browser and go to the site \url{http://localhost:4250/}. Please check
+to see if the provided web site looks correct. Before moving onto the next
+steps, you should also use, for instance, Chrome Developer Tools, to see how
+this web site ``responds'' to different viewport widths. Additionally, make sure
+that you read all of the documentation for Bootstrap that is available at
+\program{https://getbootstrap.com/}. You should also read the documentation for
+the themes site, called Bootswatch, by visiting
+\program{https://getbootstrap.com/}. Any questions so far?
 
-Remember, you can run your web server by typing the command \command{serve
-src/www 4250}. At this point, you can start your web browser and go to the site
-\url{http://localhost:4250/}. Please check to see if your new web site looks
-correct. If it is not, then continue to edit and check it until the files are
-correct. You should also ensure that, when you run the web server, it produces
-output suggesting that it is returning the HTML and CSS files and all of the
-locally stored images (i.e., both $I_1$ and $I_2$ and all of the resized
-versions of these images). If not, then please make sure that you revise your
-HTML and/or CSS source code and/or check the configuration of your web server.
-Critically, students should note that, depending on how they organize their
-files, they may have to create directories in the ``root'' of their web server
-to contain, for instance, the images.
+After using grid or lined paper to design your web site and thinking carefully
+about its content, you are ready to pick one of the Bootswatch themes. If you
+know the name of your chosen theme, you can go to the BootstrapCDN, available at
+\program{https://www.bootstrapcdn.com/}, to access the URL that provides a way
+to download a ``minified'' CSS file for your theme. If you use this URL
+correctly, then you should notice that, for instance, the colors in your site
+change accordingly. Finally, you are ready to start adding the HTML source code
+that your site will need to responsively display its content. You can access a
+template for this code by finding an element that you need on the Bootswatch
+site, clicking it, and then clicking the ``code icon'' to reveal the needed
+code. If you position (or modify) it appropriately, you should see that this
+themed and responsive element is available on your site! Talk with the
+instructor if you cannot add in a new responsive element.
 
-% Please see the instructor if you have questions about the CSS or HTML code.
-
-As you complete this assignment, you should regularly commit files to your
-GitHub repository, using the ``Git Cheat Sheet'' and following the steps that
-are described in the next section. Also, note that your web server will require
-a dedicated terminal when it is running. After completing the assignment,
-reflect on the entire process. What step did you find to be the most
-challenging? You should write your reflections in a file, called \reflection{},
-that also uses Markdown. To complete this part of the assignment, you should
-write one high-quality paragraph that reports on your experiences. Now, verbally
-share your experiences with another class member and the instructor and at least
-one the teaching assistants! Finally, please take the time to answer the other
-questions in the \reflection{} file. For instance, ensure that you understand
-and can explain how to use Bootstrap and Bootswatch to enable the display of the
+After completing the assignment, reflect on the entire process. What step did
+you find to be the most challenging? You should write your reflections in a
+file, called \reflection{}, that uses Markdown. Now, verbally share your
+experiences with another class member and the instructor and at least one the
+teaching assistants! Finally, please take the time to answer the other questions
+in the \reflection{} file. For instance, ensure that you understand and can
+explain how to use Bootstrap and Bootswatch to enable the display of the
 mobile-ready content.
 
 \section*{Checking the Correctness of Your Web Site and Writing}
